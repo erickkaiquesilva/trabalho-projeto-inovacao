@@ -1,0 +1,95 @@
+*{
+    margin: 0 auto;
+    padding: 0px;
+
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+
+    outline: none;
+}
+
+:root{
+
+    --green: #1ddfae;
+    --blue:  #7cbbff;
+    --orange:rgb(246, 115, 59);
+    --red:   #d32020;  
+
+    --green-h: #28c29b;
+    --orange-h: rgb(245, 99, 37);
+
+}
+img{width: 100%;}
+.txt-center{text-align: center;}
+.space{padding-bottom: 50px;}
+.fontzero{font-size: 0em;}
+.background-topo{background-color: var(--green);}
+.menu{padding-bottom: 25px;}
+.menu{list-style: none; margin-top: 20px;}
+.menu li{display: inline; margin-left: 5px;}
+.menu a{font-size: 0.9em; font-weight: bold; color: #FFF; padding: 15px 20px; text-transform: uppercase; text-decoration: none; border: 1px solid transparent; transition: all ease 0.7s; -moz-transition: all ease 0.7s; -webkit-transition: all ease 0.7s;}
+.menu a:hover{background-color: rgba(53, 53, 53, 0.144); border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px; border: 1px solid #FFF;}
+.btn-access{width: 100%; background-color: transparent; font-size: 1.1em; font-weight: bold; color: #FFF; border: 2px solid #FFF; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px; margin-top: 15px; transition: all ease 0.7s; -moz-transition: all ease 0.7s; -webkit-transition: all ease 0.7s;}
+.btn-access:hover{background-color: var(--blue); color: #FFF; border: 2px solid var(--blue);}
+.btn-access:focus{background-color: var(--blue); color: #FFF; border: 2px solid var(--blue);}
+/* Class Article Inicial */
+.text-center h1{font-size: 4.5em; font-weight: bold; color: #FFF; margin-top: 75px;}
+.text-center p{font-size: 1.5em; color: #FFF; font-weight: lighter; line-height: 175%;}
+.text-center ul{list-style: none; margin: 100px 0px;}
+.text-center ul li{display: inline; margin-left: 10px;}
+.text-center li a{padding: 20px; font-size: 1.6em; text-decoration: none; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;}
+/* SEÇÃO QUEM SOMOS */
+.box_quem_somos{margin: 25px 0px;}
+.box_quem_somos img{width: 100%; max-width: 120px; display: block; border: 1px solid #CCC; padding: 7px; border-radius: 7px;}
+.box_quem_somos h1{display: block; font-size: 2em; font-weight: bold;}
+.box_quem_somos p{display: block; font-size: 1.2em; line-height: 175%; font-weight: lighter;}
+/* SEÇÃO PROJETO */
+.box_projeto p{font-size: 1.5em; font-weight: normal; line-height: 175%; padding: 15px;}
+.btns-check ul{list-style: none; margin-bottom: 25px; margin-left: 350px; margin-top: 75px;}
+.btns-check ul li{display: inline; margin: 15px 35px;}
+.btns-check li a{font-size: 1.7em; text-align: center; padding: 15px; text-decoration: none; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;} 
+/* SEÇÃO TECNOLOGIAS */
+.box_tecnologias{margin: 35px 5px; border: 1px solid #DDD; height: 350px; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px; transition: all ease-in 0.7s;}
+.box_tecnologias:hover{border-color: transparent; box-shadow: 0px 5px 7px rgba(78, 78, 78, 0.37); -moz-box-shadow: 0px 5px 7px rgba(78, 78, 78, 0.37); -webkit-box-shadow: 0px 5px 7px rgba(78, 78, 78, 0.37);}
+.box_tecnologias img{display: block; padding: 15px; width: 100%; max-width: 180px;}
+.box_tecnologias h1{display: block; font-size: 2.5em; font-weight: bold; color: #444; text-align: center;}
+/* SEÇÃO EQUIPE */
+.box_equipe{padding-bottom: 15px; margin: 20px 0px;}
+.box_equipe img{float: left; width: 100%; max-width: 120px; border-radius:100%; height: 120px;}
+.box_equipe ul{float: left; margin: 25px 35px; list-style: none;}
+.box_equipe ul li{display: block; margin-bottom: 10px;}
+.box_equipe li span{font-weight: bold; font-size: 1.1em; color: #444;}
+.box_equipe li a{text-decoration: underline; color: var(--blue); font-size: 1.1em;}
+.box_equipe li a:hover{font-weight: bold;}
+/* SEÇÃO FALE CONOSCO */
+.form label{display: block; font-size: 1.5em; color: #444;}
+.form .inputs{width: 100%; height: 50px; margin: 20px 0px; padding: 7px; border: 1px solid #DDD;}
+.form .inputs:focus{font-weight: bold; color: #444; border: 1px solid var(--green);}
+.form .input-text{width: 100%; height: 180px; padding: 7px;}
+.form .input-text:focus{font-weight: bold; color: #444; border: 1px solid var(--green);}
+.form .btn-submit{width: 50%; height: 50px; font-size: 1.5em; border-color:transparent; margin: 15px 0px;}
+.box_faleconosco p{padding: 25px; line-height: 175%; color: #444; font-size: 1.5em;}
+.box_faleconosco ul{margin-left: 25px; list-style: none;}
+.box_faleconosco ul li{display: block; margin: 15px 0px;}
+.box_faleconosco li a{font-size: 1.3em;}
+/* FOOTER */
+.rodade{padding-bottom: 35px; background-color: #FFF}
+.rodade p{text-align: center; padding-top: 15px; font-weight: bold; color: #CCC;}
+
+/* BTNS */
+.btn-green{background: var(--green); color: #FFF;}
+.btn-green:hover{background: var(--green-h); color: #FFF;}
+.btn-green:focus{background: var(--green-h); color: #FFF;}
+.btn-blue{background: var(--blue);}
+.btn-orange{background: var(--orange); color: #FFF;}
+.btn-orange:hover{background: var(--orange-h); color: #FFF;}
+.btn-orange:focus{background: var(--orange-h); color: #FFF;}
+
+.btn-green-outline{background: transparent; border: 2px solid var(--green); color: #FFF;}
+.btn-green-outline:hover{background: var(--green); border: 2px solid var(--green); color: #FFF;}
+.btn-orange-outline{background: transparent; border: 2px solid var(--orange); color: #FFF;}
+.btn-orange-outline:hover{background: var(--orange); border: 2px solid var(--orange); color: #FFF;}
+
+/* TITLE'S */
+.title-big{font-size: 4em;}
+.title-faleconosco{font-size: 5.5em; text-transform: uppercase; font-weight: bold; line-height: 150%;}
