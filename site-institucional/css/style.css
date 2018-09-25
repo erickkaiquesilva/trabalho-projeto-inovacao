@@ -19,6 +19,10 @@
     --orange-h: rgb(245, 99, 37);
 
 }
+/* BACKGROUNDS COM IMGS */
+.two-background{background-image: url("../img/two-background.jpg"); background-repeat: no-repeat; background-attachment: fixed; background-position: center; transition: all ease 1.9s;}
+.two-background:hover{background-position: bottom;}
+
 img{width: 100%;}
 .txt-center{text-align: center;}
 .space{padding-bottom: 50px;}
@@ -44,13 +48,14 @@ img{width: 100%;}
 .box_quem_somos h1{display: block; font-size: 2em; font-weight: bold;}
 .box_quem_somos p{display: block; font-size: 1.2em; line-height: 175%; font-weight: lighter;}
 /* SEÇÃO PROJETO */
+.banner-project img{margin: 20px 0px; border-radius: 15px;}
 .box_projeto p{font-size: 1.5em; font-weight: normal; line-height: 175%; padding: 15px;}
-.btns-check ul{list-style: none; margin-bottom: 25px; margin-left: 350px; margin-top: 75px;}
-.btns-check ul li{display: inline; margin: 15px 35px;}
-.btns-check li a{font-size: 1.7em; text-align: center; padding: 15px; text-decoration: none; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;} 
+.btns-check ul{list-style: none; margin-bottom: 25px; margin-top: 75px;}
+.btns-check ul li{display: block; margin: 15px 35px;}
+.btns-check li a{display: block; font-size: 1.7em; text-align: center; padding: 15px; text-decoration: none; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;} 
 /* SEÇÃO TECNOLOGIAS */
-.box_tecnologias{margin: 35px 5px; border: 1px solid #DDD; height: 350px; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px; transition: all ease-in 0.7s;}
-.box_tecnologias:hover{border-color: transparent; box-shadow: 0px 5px 7px rgba(78, 78, 78, 0.37); -moz-box-shadow: 0px 5px 7px rgba(78, 78, 78, 0.37); -webkit-box-shadow: 0px 5px 7px rgba(78, 78, 78, 0.37);}
+.box_tecnologias{margin: 35px 5px; border-bottom: 4px solid var(--green); height: 350px; transition: all ease-in 0.7s;}
+.box_tecnologias:hover{border-color: transparent; box-shadow: 0px 5px 7px rgba(78, 78, 78, 0.37); -moz-box-shadow: 0px 5px 7px rgba(78, 78, 78, 0.37); -webkit-box-shadow: 0px 5px 7px rgba(78, 78, 78, 0.37); border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;}
 .box_tecnologias img{display: block; padding: 15px; width: 100%; max-width: 180px;}
 .box_tecnologias h1{display: block; font-size: 2.5em; font-weight: bold; color: #444; text-align: center;}
 /* SEÇÃO EQUIPE */
@@ -85,7 +90,7 @@ img{width: 100%;}
 .btn-orange:hover{background: var(--orange-h); color: #FFF;}
 .btn-orange:focus{background: var(--orange-h); color: #FFF;}
 
-.btn-green-outline{background: transparent; border: 2px solid var(--green); color: #FFF;}
+.btn-green-outline{background: transparent; border: 2px solid var(--green); color: var(--green);}
 .btn-green-outline:hover{background: var(--green); border: 2px solid var(--green); color: #FFF;}
 .btn-orange-outline{background: transparent; border: 2px solid var(--orange); color: #FFF;}
 .btn-orange-outline:hover{background: var(--orange); border: 2px solid var(--orange); color: #FFF;}
