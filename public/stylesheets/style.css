@@ -1,0 +1,29 @@
+/* CSS DE ESTILIZAÇÃO */
+body{
+  margin: 0 auto;
+  padding: 0px;
+
+  font-weight: normal;
+  font-size: 1em;
+  font-family: 'Krub', sans-serif;
+}
+/* PALETA DE CORES */
+:root{
+
+    /* CORES SECUNDARIAS */
+    --wine: #3b0632;
+    --yellow: #f7e924;
+    --white: #FFFFFF;
+    --black: #202020;
+    /* CORES DE EFEITO */
+    --wine_h: #2b0524;
+    --yellow_h: #dfd227;
+}
+/* BACKGROUND SECUNDARIO */
+.background-primary{background-color: var(--wine); border-bottom: 2px solid var(--black);}
+/* MENU DE NAVEGAÇÃO */
+.navegation{margin: 30px 0px;}
+.navegation li{display: inline; margin: 0px 20px;}
+.navegation a{text-transform: uppercase; font-size: 2em; color: var(--white); padding: 7px 15px; text-decoration: none; transition: all ease 0.7s;}
+.navegation a:hover{background: var(--black);}
+.slide-show img{width: 100%;}
