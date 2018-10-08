@@ -12,7 +12,7 @@ body{
 
     /* CORES SECUNDARIAS */
     --wine: #3b0632;
-    --yellow: #f7e924;
+    --yellow: #e9da04;
     --white: #FFFFFF;
     --black: #202020;
     --green: #1df098;
@@ -23,6 +23,8 @@ body{
 .space{padding-bottom: 45px;}
 /* BACKGROUND SECUNDARIO */
 .background-primary{background-color: var(--wine); border-bottom: 2px solid var(--black);}
+.background-equip{background-image: url("../images/equip.jpg"); background-repeat: no-repeat; background-attachment: fixed; background-position: top;}
+.background-faleconosco{}
 /* MENU DE NAVEGAÇÃO */
 .navegation{margin: 30px 0px;}
 .navegation li{display: inline; margin: 0px 10px;}
@@ -39,11 +41,24 @@ body{
 .pilares-empresa p{font-size: 1.3em; font-weight: normal; color: #444; line-height: 200%;}
 /* SECTION PROJETO */
 .background-projetc{background-image: url("../images/fundo-wine.jpg"); background-position: center; background-repeat: no-repeat; height: 500px;}
-.explication-project h1{font-size: 5em; font-weight: bold; color: #444;}
-.explication-project p{font-size: 2em; line-height: 200%; padding: 25px;}
+.background-explication-tecnologhy{background-image: url("../images/fundo-arduino.jpg"); background-position: center; background-repeat: no-repeat; height: 500px;}
+.explication-project h1, .explication-arduino h1{font-size: 5em; font-weight: bold; color: #444;}
+.explication-project p, .explication-arduino p{font-size: 2em; line-height: 200%; padding: 25px;}
 .explication-project a{text-align: center; font-size: 2.3em; background: var(--wine); padding: 10px 50px; color: var(--white); font-weight: bold; text-transform: uppercase; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px; border: 2px solid var(--wine_h); text-decoration: none; display: block; width:  50%; transition: all ease-out 1s;}
 .explication-project a:hover{background: var(--white); color: var(--wine_h);}
+.explication-arduino a{font-size: 2.3em; font-weight: bold; padding: 10px 50px;}
+/* SECTION COLABORADORES */
+.box-user{text-align: center; margin-top: 25px;}
+.box-user img{width: 100%; max-width: 80px;}
+.box-user h1{font-size: 3em; font-weight: bold;}
+.box-user a{font-size: 1.7em; color: var(--wine);}
+/* SECTION FALE CONOSCO */
+.banner-faleconosco{background: var(--wine);}
+.banner-faleconosco h1{font-size: 10em; font-weight: bold; padding: 35px; color: var(--white);}
+.banner-faleconosco p{line-height: 175%; padding: 35px;} 
 /* BUTONS DEFINIDOS */
 .btn-out-green{background: transparent; color: var(--green); border-color: var(--green); transition: all ease-out 1s;}
 .btn-out-green:hover{background: var(--green); color: var(--white);}
 .btn-out-green:focus{background: var(--green); color: var(--white);}
+.btn-yellow{background: var(--yellow); color: var(--white);}
+.btn-yellow:hover{background: var(--yellow_h); color: var(--white);}
