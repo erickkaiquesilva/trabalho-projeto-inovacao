@@ -19,6 +19,7 @@ body{
     --wine_h: #2b0524;
     --yellow_h: #dfd227;
 }
+.space{padding-bottom: 45px;}
 /* BACKGROUND SECUNDARIO */
 .background-primary{background-color: var(--wine); border-bottom: 2px solid var(--black);}
 /* MENU DE NAVEGAÇÃO */
@@ -27,3 +28,16 @@ body{
 .navegation a{text-transform: uppercase; font-size: 2em; color: var(--white); padding: 7px 15px; text-decoration: none; transition: all ease 0.7s;}
 .navegation a:hover{background: var(--black);}
 .slide-show img{width: 100%;}
+/* SECTION QUEM SOMOS */
+.header-quemsomos h1{font-size: 5em; font-weight: bold; text-transform: uppercase;}
+.header-quemsomos p{font-size: 1.5em; font-weight: normal; padding: 15px; line-height: 175%;}
+.pilares-empresa{text-align: center; margin: 25px 0px;}
+.pilares-empresa img{width: 100%; max-width: 80px;}
+.pilares-empresa h1{font-size: 3em; font-weight: lighter; color: #444; text-transform: uppercase; padding: 5px; text-align: center;}
+.pilares-empresa p{font-size: 1.3em; font-weight: normal; color: #444; line-height: 200%;}
+/* SECTION PROJETO */
+.background-projetc{background-image: url("../images/fundo-wine.jpg"); background-position: center; background-repeat: no-repeat; height: 500px;}
+.explication-project h1{font-size: 5em; font-weight: bold; color: #444;}
+.explication-project p{font-size: 2em; line-height: 200%; padding: 25px;}
+.explication-project a{text-align: center; font-size: 2.3em; background: var(--wine); padding: 10px 50px; color: var(--white); font-weight: bold; text-transform: uppercase; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px; border: 2px solid var(--wine_h); text-decoration: none; display: block; width:  50%; transition: all ease-out 1s;}
+.explication-project a:hover{background: var(--white); color: var(--wine_h);}
