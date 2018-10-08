@@ -6,6 +6,8 @@ body{
   font-weight: normal;
   font-size: 1em;
   font-family: 'Krub', sans-serif;
+
+  outline: none;
 }
 /* PALETA DE CORES */
 :root{
@@ -54,8 +56,12 @@ body{
 .box-user a{font-size: 1.7em; color: var(--wine);}
 /* SECTION FALE CONOSCO */
 .banner-faleconosco{background: var(--wine);}
-.banner-faleconosco h1{font-size: 10em; font-weight: bold; padding: 35px; color: var(--white);}
-.banner-faleconosco p{line-height: 175%; padding: 35px;} 
+.banner-faleconosco h1{font-size: 15em; font-weight: bold; padding: 35px; color: var(--white);}
+.banner-faleconosco p{line-height: 175%; padding: 35px; font-size: 1.5em; color: var(--white);} 
+.form-faleconosco label{display: block; font-size: 2.4em; font-weight: normal; margin: 10px 0px;}
+.form-faleconosco .inputs{width: 100%; max-width: 550px; height: 45px; padding: 15px; font-size: 1.2em; color: var(--wine); font-weight: normal;}
+.form-faleconosco textarea{width: 70%; resize: none; height: 150px;}
+.form-faleconosco .inputs:focus, .form-faleconosco textarea:focus{font-weight: bold; border-color: var(--wine_h);}
 /* BUTONS DEFINIDOS */
 .btn-out-green{background: transparent; color: var(--green); border-color: var(--green); transition: all ease-out 1s;}
 .btn-out-green:hover{background: var(--green); color: var(--white);}
