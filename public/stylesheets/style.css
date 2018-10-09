@@ -23,7 +23,13 @@ body{
     --yellow_h: #dfd227;
 }
 .space{padding-bottom: 45px;}
-/* BACKGROUND SECUNDARIO */
+.bg-wine{background: var(--wine); color: var(--white);}
+.fl_left{float: left;}
+.fl_right{float: right;}
+.txt_right{text-align: right;}
+.anime{opacity: 0; transform: translate3d(-100px, 0, 0); transition: .3s;}
+.anime-start{opacity: 1; transform: translate3d(0, 0, 0);}
+/* ACKGROUND SECUNDARIO */
 .background-primary{background-color: var(--wine); border-bottom: 2px solid var(--black);}
 .background-equip{background-image: url("../images/equip.jpg"); background-repeat: no-repeat; background-attachment: fixed; background-position: top;}
 .background-faleconosco{}
@@ -49,6 +55,9 @@ body{
 .explication-project a{text-align: center; font-size: 2.3em; background: var(--wine); padding: 10px 50px; color: var(--white); font-weight: bold; text-transform: uppercase; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px; border: 2px solid var(--wine_h); text-decoration: none; display: block; width:  50%; transition: all ease-out 1s;}
 .explication-project a:hover{background: var(--white); color: var(--wine_h);}
 .explication-arduino a{font-size: 2.3em; font-weight: bold; padding: 10px 50px;}
+.box-tecnologias{text-align: center; margin: 20px 0px;}
+.box-tecnologias h1{font-size: 4.5em; padding: 10px; color: var(--wine); font-weight: lighter;}
+.box-tecnologias p{font-size: 1.2em; font-weight: bold; line-height: 200%;}
 /* SECTION COLABORADORES */
 .box-user{text-align: center; margin-top: 25px;}
 .box-user img{width: 100%; max-width: 80px;}
@@ -58,10 +67,13 @@ body{
 .banner-faleconosco{background: var(--wine);}
 .banner-faleconosco h1{font-size: 15em; font-weight: bold; padding: 35px; color: var(--white);}
 .banner-faleconosco p{line-height: 175%; padding: 35px; font-size: 1.5em; color: var(--white);} 
+.banner-faleconosco .nav-socialmidia a{font-size: 2em; margin: 15px 20px; color: var(--white); font-weight: bold;}
 .form-faleconosco label{display: block; font-size: 2.4em; font-weight: normal; margin: 10px 0px;}
 .form-faleconosco .inputs{width: 100%; max-width: 550px; height: 45px; padding: 15px; font-size: 1.2em; color: var(--wine); font-weight: normal;}
 .form-faleconosco textarea{width: 70%; resize: none; height: 150px;}
 .form-faleconosco .inputs:focus, .form-faleconosco textarea:focus{font-weight: bold; border-color: var(--wine_h);}
+.form-faleconosco button{width: 45%; height: 45px; font-size: 1.7em; font-weight: bold; margin-top: 20px;}
+.nav-socialmidia{margin-bottom: 50px;}
 /* BUTONS DEFINIDOS */
 .btn-out-green{background: transparent; color: var(--green); border-color: var(--green); transition: all ease-out 1s;}
 .btn-out-green:hover{background: var(--green); color: var(--white);}
