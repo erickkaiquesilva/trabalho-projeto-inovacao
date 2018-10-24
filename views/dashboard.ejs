@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        <%= title %>
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Krub:300,400,600,700" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel='stylesheet' href='../stylesheets/style.css' />
+
+    <link rel='stylesheet' href='../stylesheets/icons.css' />
+</head>
+
+<body>
+    <header class="container-fluid background-primary ">
+        <div class="row">
+            <div class="col-lg-2 logo">
+                <h1 class="fontzero">
+                    <%= title %>
+                        <img src="../images/logo.png" alt="[vincoll]" title="Vincool">
+                </h1>
+            </div>
+
+            <div class="col-lg-8">
+                <ul class="navegation">
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <a href="">Quem Somos</a>
+                    </li>
+                    <li>
+                        <a href="">Produto</a>
+                    </li>
+                    <li>
+                        <a href="">Tecnologias</a>
+                    </li>
+                    <li>
+                        <a href="">Equipe</a>
+                    </li>
+                    <li>
+                        <a href="">Fale Conosco</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-2 main-log">
+                <a href="/login" class="btn btn-out-green">LOG IN</a>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="menu-nav">
+                    <nav>
+                        <ul>
+                            <a href="/dashboard">
+                                <li>
+                                    <div class="barra"></div>
+                                    <p class="menu">Dashboard</p>
+                                </li>
+                            </a>
+
+                            <a href="">
+                                <li>
+                                    <div class="barra"></div>
+                                    <p class="menu">Meu Perfil</p>
+                                </li>
+                            </a>
+
+                            <a href="">
+                                <li>
+                                    <div class="barra"></div>
+                                    <p class="menu">Como Funciona</p>
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <div class="barra"></div>
+                                    <p class="menu">Fale com Equipe</p>
+                                </li>
+                            </a>
+                            <a href="/">
+                                <li>
+                                    <div class="barra"></div>
+                                    <p class="menu">Sair</p>
+                                </li>
+                            </a>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-lg-10">
+                <div class="box-info">
+                    <ul>
+                        <li class="fn-out-line-green text-info">
+                            <h1>17°C</h1>
+                            <p>temp</p>
+                        </li>
+                        <li class="fn-out-line-blue text-info">
+                            <h1>50%</h1>
+                            <p>umi</p>
+                        </li>
+                        <li class="fn-out-line-gray text-info">
+                            <h1>15°</h1>
+                            <p>méd</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="left chart-container" style="position: relative; height:60vh; width:60vw; margin-bottom: 100px;">
+                    <canvas class="line-chart"></canvas>
+                </div>
+                
+                <div class="left chart-container" style="position: relative; height:60vh; width:60vw; ">
+                    <canvas class="bar-chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script>
+
+        var ctx = document.getElementsByClassName("line-chart");
+        var btx = document.getElementsByClassName("bar-chart");
+
+        // O Gráfico trabalha com tres linhas
+        // São os Types, Data, Options
+
+        var arr = ["14", "40", "13", "12", "15", "12"];
+
+        console.log(arr);
+
+        // GRAPH EM BAR
+
+        var barChart = new Chart(btx, {
+            type: 'bar',
+            data: {
+                labels: ["Semana 1", "Semana 2", "Semana 3", "Semana 4", "Semana 5", "Semana 6"],
+                datasets: [{
+                    label: "Temperatura Média",
+                    data: [
+                        arr[0],
+                        arr[1],
+                        arr[2],
+                        arr[3],
+                        arr[4],
+                        arr[5]
+                    ],
+                    borderWidth: 2,
+                    borderColor: 'rgba(255, 99, 132, 0.85)',
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)'
+                },
+                {
+                    label: "Umidade Média",
+                    data: [30, 23, 3, 32, 40, 45],
+                    borderWidth: 2,
+                    borderColor: 'rgba(255, 159, 64, 0.85)',
+                    backgroundColor: 'rgba(255, 159, 64, 0.2)'
+                }]
+            }
+        });
+
+
+        // GRAPH EM LINE
+        var chartGraph = new Chart(ctx, {
+
+            type: 'line',
+            data: {
+                labels: ["20/05", "21/05", "22/05", "23/05", "24/05", "25/05"],
+                datasets: [{
+                    label: "TEMPERATURA",
+                    data: [30, 23, 33, 32, 40, 45, 45],
+                    borderWidth: 5,
+                    borderColor: 'rgba(77,165,253,0.85)',
+                    backgroundColor: 'transparent'
+                },
+                {
+                    label: "UMIDADE",
+                    data: [30, 23, 3, 32, 40, 45, 45],
+                    borderWidth: 5,
+                    borderColor: 'rgba(77,15,253,0.85)',
+                    backgroundColor: 'transparent'
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    fontSize: 30,
+                    text: 'MÁX e MIN',
+                },
+                labels: {
+                    fontStyle: 'bold',
+                },
+                layout: {
+                    margin: {
+                        left: 0,
+                        right: 0,
+                        top: 0,
+                        bottom: 150
+                    }
+                }
+            }
+        });
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

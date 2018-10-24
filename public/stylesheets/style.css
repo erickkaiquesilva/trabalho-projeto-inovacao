@@ -1,5 +1,5 @@
 /* CSS DE ESTILIZAÇÃO */
-body{
+*, body{
   margin: 0 auto;
   padding: 0px;
 
@@ -12,16 +12,23 @@ body{
 /* PALETA DE CORES */
 :root{
 
-    /* CORES SECUNDARIAS */
+    /*CORES SECUNDARIAS*/
     --wine: #3b0632;
     --yellow: #e9da04;
     --white: #FFFFFF;
     --black: #202020;
     --green: #1df098;
+    --gray: #808080;
+    --blue: #1d7ff0;
     /* CORES DE EFEITO */
     --wine_h: #2b0524;
     --yellow_h: #dfd227;
+    /* CORES COM OPACIDADE */
+    --green_opacity: #1df098a9;
+    --wine_opacity: #3b0632ad;
 }
+/* GLOBAIS */
+.inputs{width: 100%; height: 45px; margin: 15px 0px; padding: 7px; font-size: 1.2em; color: var(--wine); font-weight: normal;}
 .space{padding-bottom: 45px;}
 .bg-wine{background: var(--wine); color: var(--white);}
 .fl_left{float: left;}
@@ -29,15 +36,17 @@ body{
 .txt_right{text-align: right;}
 .anime{opacity: 0; transform: translate3d(-100px, 0, 0); transition: .3s;}
 .anime-start{opacity: 1; transform: translate3d(0, 0, 0);}
+.fontzero{font-size: 0em;}
+.left{float: left;}
 /* ACKGROUND SECUNDARIO */
-.background-primary{background-color: var(--wine); border-bottom: 2px solid var(--black);}
+.background-primary{background-color: var(--wine);}
 .background-equip{background-image: url("../images/equip.jpg"); background-repeat: no-repeat; background-attachment: fixed; background-position: top;}
-.background-faleconosco{}
 /* MENU DE NAVEGAÇÃO */
+.logo img{width: 100%; width: 160px;}
 .navegation{margin: 30px 0px;}
 .navegation li{display: inline; margin: 0px 10px;}
 .navegation a{text-transform: uppercase; font-size: 1.5em; color: var(--white); padding: 7px 15px; text-decoration: none; transition: all ease 0.7s;}
-.navegation a:hover{background: var(--green); color: #444; font-weight: bold; padding: 15px 15px;}
+.navegation a:hover{background: var(--green); color: #444; font-weight: bold; padding: 20px 15px;}
 .main-log a{margin-left: 10px; font-size: 1.7em; margin-top: 25px; padding: 7px 15px; text-transform: uppercase; font-weight: bold; }
 .slide-show img{width: 100%;}
 /* SECTION QUEM SOMOS */
@@ -74,9 +83,49 @@ body{
 .form-faleconosco .inputs:focus, .form-faleconosco textarea:focus{font-weight: bold; border-color: var(--wine_h);}
 .form-faleconosco button{width: 45%; height: 45px; font-size: 1.7em; font-weight: bold; margin-top: 20px;}
 .nav-socialmidia{margin-bottom: 50px;}
-/* BUTONS DEFINIDOS */
+/* AND SITE INSTITUCIONAL */
+/* PAGE LOGIN */
+.box-login h1{font-size: 5em; text-align: center; font-weight: bold; padding-top: 10px;}
+.form-login{margin-top: 15px; border: 1px solid rgb(236, 236, 236); padding: 15px 40px; padding-bottom: 30px; border-radius: 7px;}
+.form-login img{width: 100%; max-width: 120px; height: 120px; padding: 15px;} 
+.form-login label{font-size: 2.5em; font-weight: bold; display: block; color: var(--gray);}
+.form-login .inputs{padding: 5px; width: 100%; height: 40px; border: 1px solid var(--gray); border-radius: 3px; transition: all ease 1s;}
+.form-login .inputs:focus{box-shadow: 0px 3px 3px var(--wine_opacity); border-color: transparent; font-weight: bold;} 
+.form-login button{font-size: 2em; font-weight: bold; width: 70%; height: 45px; border: 2px solid; margin-top: 20px;}
+/* AND PAGE LOGIN */
+/* PAGE CADASTRO */
+.form-cadastro label{font-size: 1.5em; display: block; font-weight: bold; color: var(--wine); padding-top: 15px;}
+.form-cadastro .inputs{max-width: 500px; border: 2px solid #CCC; border-radius: 7px; transition: all ease-in 0.7s; outline: none;}
+.form-cadastro .inputs:focus{border-color: var(--wine); border-radius: 0px; font-weight: bold; }
+.banner-cadastro img{width: 100%; max-width: 400px; margin-top: 50px; position: fixed;}
+/* AND CADASTRO */
+/*  PAGE DASHBOARD */
+.menu-nav nav{position: fixed;	width: 225px;	height: 100%;	background-color: #1f1f1f; left: 0;}
+.menu-nav ul{margin-top:150px;	list-style: none;	display: block; margin-left: -40px;}
+.menu-nav li{width: 100%;	height:50px;	border-bottom: 1px solid #323232;	overflow: hidden;}
+.menu-nav p.menu{position: relative;	padding:16px;	padding-right: 25px;	float:right;	color:white;	opacity: .6;	font-size: 1.2em;	-webkit-transition: opacity .2s;}
+.menu-nav div.barra{position: absolute; height: 50px;	width: 0px;	background-color: #aaa;	opacity: .1; -webkit-transition: width .2s;}
+.menu-nav li:hover div.barra{width:100%;}
+.menu-nav li:hover p.menu{opacity: 1;}
+.box-info{float: left; margin-top: 10px; width: 100%;}
+.box-info li{display: inline-block; margin: 0px 7px; color: #1f1f1f; width: 30%; padding: 30px; text-align: center; border-radius: 7px; border: 3px solid;;} 
+.text-info{display: inline-block; cursor: default;}
+.text-info h1{font-size: 4em;}
+.text-info p{font-size: 1.5em; text-transform: uppercase;}
+/* BUTONS, FUNDOS DEFINIDOS */
 .btn-out-green{background: transparent; color: var(--green); border-color: var(--green); transition: all ease-out 1s;}
 .btn-out-green:hover{background: var(--green); color: var(--white);}
 .btn-out-green:focus{background: var(--green); color: var(--white);}
+.btn-green{background: var(--green); color:var(--white);}
 .btn-yellow{background: var(--yellow); color: var(--white);}
 .btn-yellow:hover{background: var(--yellow_h); color: var(--white);}
+
+.fn-out-line-green{border-color: var(--green) !important; color: var(--green) !important;}
+.fn-out-line-green:hover{background: var(--green); color: var(--white) !important;}
+.fn-out-line-blue{border-color: var(--blue) !important; color: var(--blue) !important;}
+.fn-out-line-blue:hover{background: var(--blue); color: var(--white) !important;}
+.fn-out-line-gray{border-color: var(--gray) !important; color: var(--gray) !important;}
+.fn-out-line-gray:hover{background: var(--gray); color: var(--white) !important;}
+
+/* TEXT STYLE */
+.title-big{font-size: 7em; font-weight: bold;}

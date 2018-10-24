@@ -9,14 +9,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Site Institucional</title>
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+  <script src="../js/jquery.js"></script>
+  <script src="../js/scripts.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Krub:300,400,600,700" rel="stylesheet">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-  <script src="../js/scripts.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -30,11 +27,13 @@
 
   <header class="container-fluid background-primary ">
     <div class="row">
-      <div class="col-lg-2">
-        <h1>
+      <div class="col-lg-2 logo">
+        <h1 class="fontzero">
           <%= title %>
+            <img src="../images/logo.png" alt="[vincoll]" title="Vincool">
         </h1>
       </div>
+
       <div class="col-lg-8">
         <ul class="navegation">
           <li>
@@ -58,11 +57,10 @@
         </ul>
       </div>
       <div class="col-lg-2 main-log">
-        <a href="#" class="btn btn-out-green">LOG IN</a>
+        <a href="/dashboard" class="btn btn-out-green">LOG IN</a>
       </div>
     </div>
   </header>
-
   <article class="slide-show">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -116,7 +114,7 @@
   <div class="space"></div>
   <article class="container-fluid">
     <div class="row">
-      <div class="col-lg-6 background-projetc">
+      <div class="col-lg-6 background-projetc anime">
 
       </div>
       <div class="col-lg-6 explication-project">
@@ -141,26 +139,28 @@
         </center>
       </div>
 
-      <div class="col-lg-6 background-explication-tecnologhy">
-        
+      <div class="col-lg-6 background-explication-tecnologhy anime">
+
       </div>
     </div>
   </article>
   <div class="space"></div>
   <!-- SGV DE IMGS, BOX DE TECNOLOGIAS USADAS -->
-  <section class="container">
+  <section class="container anime">
     <div class="row">
       <div class="col-lg-1"></div>
       <article class="col-lg-4 box-tecnologias">
         <div class="icons8-código-do-google"></div>
         <h1>Tecnologias Modernas</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repellat quibusdam eos omnis laborum pariatur possimus architecto doloremque esse corrupti minus optio, odio rem cupiditate expedita nam nihil commodi ipsam?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repellat quibusdam eos omnis laborum pariatur
+          possimus architecto doloremque esse corrupti minus optio, odio rem cupiditate expedita nam nihil commodi ipsam?</p>
       </article>
       <div class="col-lg-2"></div>
       <article class="col-lg-4 box-tecnologias bg-wine">
-          <div class="icons8-onedrive"></div>
+        <div class="icons8-onedrive"></div>
         <h1 style="color: #fff;">Tecnologia Cloud</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repellat quibusdam eos omnis laborum pariatur possimus architecto doloremque esse corrupti minus optio, odio rem cupiditate expedita nam nihil commodi ipsam?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repellat quibusdam eos omnis laborum pariatur
+          possimus architecto doloremque esse corrupti minus optio, odio rem cupiditate expedita nam nihil commodi ipsam?</p>
       </article>
 
       <div class="col-lg-1"></div>
@@ -168,7 +168,11 @@
   </section>
 
   <div class="space"></div>
-  <div class="space container-fluid"><center><h1 style="font-size: 5em;">Equipe</h1></center></div>
+  <div class="space container-fluid">
+    <center>
+      <h1 style="font-size: 5em;">Equipe</h1>
+    </center>
+  </div>
 
   <section class="container">
     <div class="row">
@@ -208,28 +212,33 @@
     <div class="row">
       <div class="col-lg-7 banner-faleconosco">
         <h1>Fale Conosco</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis incidunt culpa, blanditiis autem quibusdam velit accusantium fuga est aliquid sed obcaecati accusamus deserunt officiis, id soluta harum quis eum cumque!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis incidunt culpa, blanditiis autem quibusdam velit
+          accusantium fuga est aliquid sed obcaecati accusamus deserunt officiis, id soluta harum quis eum cumque!</p>
         <nav class="nav-socialmidia">
-          <a href=""><div class="icons8-linkedin"></div></a>
-          <a href=""><div class="icons8-instagram"></div></a>
-          <a href=""><div class="icons8-facebook"></div></a>
-        </nav>        
+          <a href="">
+            <div class="icons8-linkedin"></div>
+          </a>
+          <a href="">
+            <div class="icons8-instagram"></div>
+          </a>
+          <a href="">
+            <div class="icons8-facebook"></div>
+          </a>
+        </nav>
       </div>
       <div class="col-lg-5 form-faleconosco">
-        <label for="">Label</label>
+        <label for="">Nome Completo</label>
         <input class="inputs" type="text" placeholder="Informe" />
-        <label for="">Label</label>
+        <label for="">Email</label>
         <input class="inputs" type="text" placeholder="Informe" />
-        <label for="">Label</label>
-        <input class="inputs" type="text" placeholder="Informe" />
-        <label for="">Label</label>
+        <label for="">Responsavel</label>
         <select class="inputs" name="" id="">
           <option value="">Selecione</option>
           <option value="">Selecione</option>
           <option value="">Selecione</option>
           <option value="">Selecione</option>
         </select>
-        <label for="">Label</label>
+        <label for="">Mais Alguma Informação?</label>
         <textarea name=""></textarea>
 
         <button class="btn btn-out-green">Enviar</button>
