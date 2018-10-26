@@ -22,7 +22,79 @@
 </head>
 
 <body>
+    <header class="container-fluid background-primary ">
+        <div class="row">
+            <div class="col-lg-2 logo">
+                <h1 class="fontzero">
+                    <%= title %>
+                        <img src="../images/logo.png" alt="[vincoll]" title="Vincool">
+                </h1>
+            </div>
 
+            <div class="col-lg-8">
+                <ul class="navegation">
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <a href="">Quem Somos</a>
+                    </li>
+                    <li>
+                        <a href="">Produto</a>
+                    </li>
+                    <li>
+                        <a href="">Tecnologias</a>
+                    </li>
+                    <li>
+                        <a href="">Equipe</a>
+                    </li>
+                    <li>
+                        <a href="/cadastro">Fale Conosco</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-2 main-log">
+                <a href="/dashboard" class="btn btn-out-green">LOG IN</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row line-cadastro">
+            <h1>Cadastre-se</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, illum maxime? Qui nemo mollitia maiores, provident
+                optio corrupti aliquid similique voluptas in ratione cum fuga dolorem tenetur quisquam quam quasi!</p>
+            <div class="col-lg-5">
+                <fieldset class="box-cadastro">
+                    <label for="">Nome Completo</label>
+                    <input class="inputs" type="text" placeholder="Informe Seu Nome Completo">
+                    <label for="">Telefone</label>
+                    <input class="inputs" type="text" placeholder="Informe Seu Número de Telefone">
+                    <label for="">Sexo</label>
+                    <input type="radio" name="sexo" value="m"><label for="" style="display: inline !important; "> Masculino</label>
+                    <input type="radio" name="sexo" value="f"><label for="" style="display: inline !important; margin-left: 15px;"> Feminino</label>
+                    <label for="" style="padding-top:10px;">Tamanho Adega</label>
+                    <select class="inputs" name="" id="">
+                        <option value="">Selecione</option>
+                    </select>
+                </fieldset>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-5">
+                <fieldset class="box-cadastro">
+                    <label for="">E-mail</label>
+                    <input class="inputs" type="email" placeholder="Informe seu email">
+                    <label for="">Confirme o E-mail</label>
+                    <input class="inputs" type="email" placeholder="Confirme o email">
+                    <label for="">Senha</label>
+                    <input class="inputs" type="password" placeholder="Informe uma Senha">
+                    <button class="btn-green" onclick="cadastrar();">Cadastrar-se</button>
+                </fieldset>
+            </div>
+
+        </div>
+    </div>
+    <script src="../js/creater.js"></script>
 </body>
 
 </html>

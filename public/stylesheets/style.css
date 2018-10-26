@@ -94,10 +94,12 @@
 .form-login button{font-size: 2em; font-weight: bold; width: 70%; height: 45px; border: 2px solid; margin-top: 20px;}
 /* AND PAGE LOGIN */
 /* PAGE CADASTRO */
-.form-cadastro label{font-size: 1.5em; display: block; font-weight: bold; color: var(--wine); padding-top: 15px;}
-.form-cadastro .inputs{max-width: 500px; border: 2px solid #CCC; border-radius: 7px; transition: all ease-in 0.7s; outline: none;}
-.form-cadastro .inputs:focus{border-color: var(--wine); border-radius: 0px; font-weight: bold; }
-.banner-cadastro img{width: 100%; max-width: 400px; margin-top: 50px; position: fixed;}
+.line-cadastro h1{font-size: 5em; font-weight: bold;}
+.line-cadastro p{font-size: 1.2em; max-width: 500px; padding: 10px; line-height: 200%;}
+.box-cadastro{padding: 12px; border: 1px solid rgb(236, 236, 236); margin: 20px 0px; border-radius: 7px;}
+.box-cadastro label{display: block; font-size: 1.3em; font-weight: bold;}
+.box-cadastro .inputs{margin-bottom: 10px 0px;}
+.box-cadastro button{width: 75%; height: 45px; font-size: 1.5em; font-weight: bold; border-radius: 7px; border: 1px solid transparent}
 /* AND CADASTRO */
 /*  PAGE DASHBOARD */
 .menu-nav nav{position: fixed;	width: 225px;	height: 100%;	background-color: #1f1f1f; left: 0;}
