@@ -68,19 +68,19 @@
                     <form action="/cadastro" method="POST" name="cadastroUser">
                 <fieldset class="box-cadastro">
                     <label for="">Nome Completo</label>
-                    <input class="inputs" type="text" name="nameUser" placeholder="Informe Seu Nome Completo">
+                    <input class="inputs" type="text" name="nmUser" placeholder="Informe Seu Nome Completo">
                     <label for="">Telefone</label>
-                    <input class="inputs" type="text" name="foneUser" placeholder="Informe Seu Número de Telefone">
+                    <input class="inputs" type="text" name="nuUser" placeholder="Informe Seu Número de Telefone">
                     <label for="">Sexo</label>
-                    <input type="radio" name="sexo" value="m"><label for="" style="display: inline !important; "> Masculino</label>
-                    <input type="radio" name="sexo" value="f"><label for="" style="display: inline !important; margin-left: 15px;"> Feminino</label>
+                    <input type="radio" name="sxUser" value="m"><label for="" style="display: inline !important; "> Masculino</label>
+                    <input type="radio" name="sxUser" value="f"><label for="" style="display: inline !important; margin-left: 15px;"> Feminino</label>
                     <label for="" style="padding-top:10px;">Tamanho Adega</label>
-                    <select class="inputs" name="UF" id="">
+                    <select class="inputs" name="tpAdega" id="">
                         <option value="">Seu Estado</option>
-                        <option value="sp">São Paulo</option>
-                        <option value="rj">Rio de Janeiro</option>
-                        <option value="sc">Santa Catarina</option>
-                        <option value="pr">Paraná</option>
+                        <option value="pequena">Pequena</option>
+                        <option value="media">Média</option>
+                        <option value="grande">Grande</option>
+                        <option value="industrial">Industrial</option>
                     </select>
                 </fieldset>
             </div>
@@ -90,7 +90,7 @@
                     <label for="">E-mail</label>
                     <input class="inputs" type="email" name="mailUser" placeholder="Informe seu email">
                     <label for="">Confirme o E-mail</label>
-                    <input class="inputs" type="email" name="confMail" placeholder="Confirme o email">
+                    <input class="inputs" type="email" placeholder="Confirme o email">
                     <label for="">Senha</label>
                     <input class="inputs" type="password" name="passUser" placeholder="Informe uma Senha">
                     <button class="btn-green">Cadastrar-se</button>

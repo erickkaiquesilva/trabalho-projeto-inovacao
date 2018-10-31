@@ -36,9 +36,9 @@ function SQLQuery(queryLine){
 
 module.exports.Users = {
     insertUser: (user) => {
-        return SQLQuery(`insert into usuario values('${user.nome}','${user.sobrenome}','${user.rg}','${user.cpf}','${user.email}','${user.usuario}','${user.senha}','${user.date}')`);
+        return SQLQuery(`insert into usuario(nmUser, nuUser, sxUser, tpAdega, emUser, passUser) values ('${user.nmUser}','${user.nuUser}','${user.sxUser}','${user.tpAdega}','${user.mailUser}','${user.passUser}')`);
     },
     getUser: (user) => {
-        return SQLQuery(`select * from usuario where usuario.mailUser = '${user.mailUser}')`);
+        return SQLQuery(`select * from usuario where usuario.emUser = '${user.mailUser}'`);
     }
 }
