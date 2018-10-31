@@ -12,10 +12,6 @@ router.get('/', function(req, res, next) {
 router.post("/", (req, res) => {
   var dados = req.body;
 
-  console.log(dados);
-  
-
-
 });
 
 module.exports = router;
