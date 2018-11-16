@@ -9,7 +9,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Site Institucional</title>
-  <script src="../js/jquery.js"></script>
   <script src="../js/scripts.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Krub:300,400,600,700" rel="stylesheet">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
@@ -40,24 +39,24 @@
             <a href="">Home</a>
           </li>
           <li>
-            <a href="">Quem Somos</a>
+            <a href="#quemsomos">Quem Somos</a>
           </li>
           <li>
-            <a href="">Produto</a>
+            <a href="#produto">Produto</a>
           </li>
           <li>
-            <a href="">Tecnologias</a>
+            <a href="#tecnologia">Tecnologias</a>
           </li>
           <li>
-            <a href="">Equipe</a>
+            <a href="#equipe">Equipe</a>
           </li>
           <li>
-            <a href="">Fale Conosco</a>
+            <a href="#faleconosco">Fale Conosco</a>
           </li>
         </ul>
       </div>
       <div class="col-lg-2 main-log">
-        <a href="/dashboard" class="btn btn-out-green">LOG IN</a>
+        <a href="/login" class="btn btn-out-green">LOG IN</a>
       </div>
     </div>
   </header>
@@ -85,7 +84,7 @@
   </article>
 
   <section class="container anime">
-    <header class="header-quemsomos">
+    <header class="header-quemsomos" id="quemsomos">
       <h1>Quem Somos</h1>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia veritatis iusto optio ad sequi necessitatibus quam cumque,
         accusantium deserunt quos harum nesciunt esse quae fugit sapiente temporibus? Aut, rerum consequuntur.</p>
@@ -112,7 +111,7 @@
     </div>
   </section>
   <div class="space"></div>
-  <article class="container-fluid">
+  <article class="container-fluid" id="produto">
     <div class="row">
       <div class="col-lg-6 background-projetc anime">
 
@@ -174,39 +173,41 @@
     </center>
   </div>
 
-  <section class="container">
-    <div class="row">
-      <article class="col-lg-4 box-user">
-        <img src="../images/user.png" alt="">
-        <h1>Nome</h1>
-        <a href="#">Link</a>
-      </article>
-      <article class="col-lg-4 box-user">
-        <img src="../images/user.png" alt="">
-        <h1>Nome</h1>
-        <a href="#">Link</a>
-      </article>
-      <article class="col-lg-4 box-user">
-        <img src="../images/user.png" alt="">
-        <h1>Nome</h1>
-        <a href="#">Link</a>
-      </article>
-    </div>
-    <div class="row">
-      <div class="col-lg-2"></div>
-      <article class="col-lg-4 box-user">
-        <img src="../images/user.png" alt="">
-        <h1>Nome</h1>
-        <a href="#">Link</a>
-      </article>
-      <article class="col-lg-4 box-user">
-        <img src="../images/user.png" alt="">
-        <h1>Nome</h1>
-        <a href="#">Link</a>
-      </article>
-      <div class="col-lg-2"></div>
-    </div>
-  </section>
+  <div class="container-fluid ">
+    <section class="container">
+      <div class="row">
+        <article class="col-lg-4 box-user">
+          <img src="../images/Victor.png" alt="">
+          <h1>Nome</h1>
+          <a href="#">Link</a>
+        </article>
+        <article class="col-lg-4 box-user">
+          <img src="../images/jonatha.jpg" alt="">
+          <h1>Nome</h1>
+          <a href="#">Link</a>
+        </article>
+        <article class="col-lg-4 box-user">
+          <img src="../images/Gabi.jpg" alt="">
+          <h1>Nome</h1>
+          <a href="#">Link</a>
+        </article>
+      </div>
+      <div class="row">
+        <div class="col-lg-2"></div>
+        <article class="col-lg-4 box-user">
+          <img src="../images/erickkaique.jpg" alt="">
+          <h1>Nome</h1>
+          <a href="#">Link</a>
+        </article>
+        <article class="col-lg-4 box-user">
+          <img src="../images/lee.jpg" alt="">
+          <h1>Nome</h1>
+          <a href="#">Link</a>
+        </article>
+        <div class="col-lg-2"></div>
+      </div>
+    </section>
+  </div>
   <div class="space"></div>
   <article class="container-fluid">
     <div class="row">
@@ -246,6 +247,7 @@
     </div>
   </article>
 
+  <script src="/js/jquery.js"></script>
 
 </body>
 

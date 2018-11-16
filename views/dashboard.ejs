@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>
-        <%= title %>
+
     </title>
 
     <link href="https://fonts.googleapis.com/css?family=Krub:300,400,600,700" rel="stylesheet">
@@ -34,7 +34,7 @@
             <div class="col-lg-8">
                 <ul class="navegation">
                     <li>
-                        <a href="">Home</a>
+                        <a href="/">Home</a>
                     </li>
                     <li>
                         <a href="">Quem Somos</a>
@@ -54,7 +54,9 @@
                 </ul>
             </div>
             <div class="col-lg-2 main-log">
-                <a href="/login" class="btn btn-out-green">LOG IN</a>
+                <h1 class="name-user">Olá
+                    <span>Usuário</span>
+                </h1>
             </div>
         </div>
     </header>
@@ -83,7 +85,7 @@
                             <a href="">
                                 <li>
                                     <div class="barra"></div>
-                                    <p class="menu">Como Funciona</p>
+                                    <p class="menu">FAQ</p>
                                 </li>
                             </a>
                             <a href="">
@@ -92,7 +94,7 @@
                                     <p class="menu">Fale com Equipe</p>
                                 </li>
                             </a>
-                            <a href="/">
+                            <a href="/loggof/log">
                                 <li>
                                     <div class="barra"></div>
                                     <p class="menu">Sair</p>
@@ -119,21 +121,75 @@
                         </li>
                     </ul>
                 </div>
-                
-                <div class="left chart-container" style="position: relative; height:60vh; width:60vw; margin-bottom: 100px;">
-                    <canvas class="line-chart"></canvas>
+
+                <div style="margin-bottom: 50px !important;"></div>
+
+                <div class="row">
+                    <div class="col-lg-7 chart-container" style="position: relative; height:60vh; width:50vw">
+                        <canvas class="line-chart"></canvas>
+                    </div>
+                    <div class="col-lg-4 box-text-graphic">
+                        <h1>Gráfico Semanal</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas mollitia magnam magni eveniet quas
+                            aperiam eaque atque quae ex! Quibusdam aut, iusto perspiciatis deleniti et aspernatur distinctio
+                            alias magnam voluptates?</p>
+                    </div>
                 </div>
-                
-                <div class="left chart-container" style="position: relative; height:60vh; width:60vw; ">
-                    <canvas class="bar-chart"></canvas>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <h1>Sensor 1</h1>
+                        <div class="box-sensor">
+                            <h2>12°</h2>
+                            <p>TEMPERATURA</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <h1>Sensor 2</h1>
+                        <div class="box-sensor">
+                            <ul>
+                                <li>
+                                    <h2 id="temp-real"></h2>
+                                    <p>TEMPERATURA</p>
+                                </li>
+                                <li style="margin-left:60px;">
+                                    <h2 id="umi-real"></h2>
+                                    <p>UMIDADE</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <h1>Sensor 3</h1>
+                        <div class="box-sensor">
+                            <h2>12°</h2>
+                            <p>TEMPERATURA</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space"></div>
+                <div class="space"></div>
+
+                <div class="row">
+                    <div class="col-lg-4 box-text-graphic">
+                        <h1>Grafico Mensal</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique cum dicta labore voluptas molestias! Adipisci cupiditate hic rerum itaque fugit maiores debitis! Animi atque accusantium, placeat unde non odio quo.</p>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class=" chart-container" style="position: relative; height:60vh; width:50vw">
+                            <canvas class="bar-chart"></canvas>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="/js/jquery.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-    <script src="../js/charts.js"></script>
+    <script src="../js/graphi.js"></script>
+    
 </body>
 
 </html>

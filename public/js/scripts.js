@@ -13,6 +13,21 @@ debounce = function(func, wait, immediate) {
 		if (callNow) func.apply(context, args);
 	};
 };
+//animando topo com scroll
+$(function() {
+	$('.navegation a').click(function(e){
+		e.preventDefault();
+
+		var id = $(this).attr('href');
+		var targetOffset = $(id).offset().top;
+
+
+	$('html, body').animate({
+		scrollTop: targetOffset - 70
+	},1000);
+		console.log(targetOffset);
+	});
+});
 
 
 $(function(){
@@ -38,4 +53,4 @@ $(function(){
 	$(document).scroll(debounce(function(){
 		animeScroll();
 	}, 100));
-})();
+});
