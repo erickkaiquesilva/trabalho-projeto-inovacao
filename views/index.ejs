@@ -1,15 +1,60 @@
+<!-- 
+    Esta view ela é responsavel pela exibição do site institucional do nosso projeto,
+    nela existem as seções onde fica o topo, a imagem inicial que aparece estampada abixo do topo
+    logo depois temos aonde esta explicando a missão, valor e visão da nossa empresa. 
+    logo depois vamos ter a uma imagem e ao lado dela o nome do nosso projeto que ira explicar sobre o que estamos
+    propondo com este projeto. Abaixo as tecnologias usadas, e depois abaixo mais uma seção explicando mais 
+    tecnicamente. Logo depois temos as imagens de nossa equipe. E abaixo um campo de fale conosco, para caso o cliente 
+    queira entrar em contato conosco.
+
+    Nesta página usamos HTML5, CSS e JavaScript para estilizala. Abaixo sera explicado aonde se abre
+    cada tag e se fecha, e oque cada uma representa.
+
+ -->
 <!DOCTYPE html>
 <html>
+<!--  
+  A tag HEAD ela é uma tag HTML que usamos para carregar os arquivos externos que iremos utilizar no nosso projeto
+  Exemplo de arquivos, seria os JavaScript's externos ou o CSS que estiliza a página. 
+  A HEAD é a cabeça do documento HTML por carregar arquivos, dentro dela temos title que dira o titulo do nosso site.
+-->
 
 <head>
   <title>
-    <%= title %>
+    Vincool -
   </title>
+  <!--
+    Explicando as meta Tags.
+    As META TAGS ela são instruções que passamos para que nosso navegador entenda.
+
+    Exemplos
+
+    meta charset="UTF-8" -  ela esta passando uma instrução ao navegador para que interprete os caracteres especiais.
+    meta name="vierport" ela esta passando a instrução para o navegador permitir que este documento seja responsivo, ou seja acessivel a todos os dispositivos.
+    fazendo com que seja responsivo, e permita comando CSS que ajude a se torna responsivo. Desconsidere isto, apenas explicação para carater de entendimento de todos.
+
+    Caso deseja entender sobre estas meta tags e suas funções e saber sobre outras é possivel encontrar neste site https://www.seomarketing.com.br/meta-tags-google.php e outros mais.
+  -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Site Institucional</title>
-  <script src="../js/scripts.js"></script>
+  <!-- 
+        Nas Tags abaixo eu estou lincando a esta página arquivos externos, estes arquivos ele podem estar contidos dentro de uma pasta do projeto
+        como tambem ele pode esta sendo chamado da internet, é possivel este tipo de ação.
+
+        Exemplos 
+
+        link href="https://fonts.googleapis.com/css?family=Krub:300,400,600,700" rel="stylesheet", Este link esta chamando de uma API do google uma fonte especifica,
+        se você pesquisar google fonts encontra esta API, no HREF eu estou passando o link que traz esta fonte para dentro do nosso site e eu posso utilizala 
+        nos textos.
+        
+        link rel='stylesheet' href='../stylesheets/style.css', Ja este Link ele esta trazendo um arquivo de estilização do nosso site, que esta salvo dentro de uma pasta 
+        no nosso projeto, o HREF esta entrando na pasta public/stylesheets/style.css, quando ele faz este caminho ele encontra este arquivo e consegue estilizar nosso site,
+        com base nas CLASS que foram declaradas no nosso site. ABAIXO EU EXPLICO UM POUCO MAIS DO CONCEITO DE UMA CLASS PARA O CSS.
+
+        Enfim abaixo vocês vão encontrar muitos links como scripts, se atente nos HREF e siga a lógica dos dois exemplos citado acima.0
+    -->
   <link href="https://fonts.googleapis.com/css?family=Krub:300,400,600,700" rel="stylesheet">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
@@ -21,15 +66,23 @@
 
   <link rel='stylesheet' href='../stylesheets/icons.css' />
 </head>
+<!--
+  No BODY do nosso documento HTML ele ira conter cada elemento que esta sendo exibido na web.
+  EXEMPLO
+   
+  O HEADER que tem a DIV que contem ul li com HOME, QUEM SOMOS e ETC... bom o body é responsavel por conter esta informações dentro dele
+  o body é o corpo do nosso site, e com ele conseguimos montalo.
+-->
 
 <body>
-
+  <!--
+    A Tag Header esta contendo o topo do nosso site, dentro dela nós temos o logo do nosso site, e ao lado os links de navegação
+  -->
   <header class="container-fluid background-primary ">
     <div class="row">
       <div class="col-lg-2 logo">
         <h1 class="fontzero">
-          <%= title %>
-            <img src="../images/logo.png" alt="[vincoll]" title="Vincool">
+          <img src="../images/logo.png" alt="[vincoll]" title="Vincool">
         </h1>
       </div>
 
@@ -56,10 +109,16 @@
         </ul>
       </div>
       <div class="col-lg-2 main-log">
-        <a href="/login" class="btn btn-out-green">LOG IN</a>
+
+        <a href="/login" class="btn btn-out-green">
+          Login</a>
       </div>
     </div>
   </header>
+  <!-- FIM DO HEADER -->
+  <!--
+    Este Article ele é responsavel por ter a exibição da imagem de inicio que esta aparecendo no nosso site.
+  -->
   <article class="slide-show">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -82,44 +141,56 @@
       </a>
     </div>
   </article>
-
-  <section class="container anime">
+  <!-- FIM DO ARTICLE -->
+  <!--
+    Esta Section é responsavel por conter toda os tres blocos que fala de MISSÃO, VISÃO e VALORES
+  -->
+  <section class="container" >
     <header class="header-quemsomos" id="quemsomos">
       <h1>Quem Somos</h1>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia veritatis iusto optio ad sequi necessitatibus quam cumque,
-        accusantium deserunt quos harum nesciunt esse quae fugit sapiente temporibus? Aut, rerum consequuntur.</p>
+      <p> Somos a Vincool uma empresa que proporciona a melhor experiência para o consumidor de vinhos atráves da tecnologia. </p>
     </header>
     <div class="row pilares-empresa">
       <article class="col-lg-4">
         <img src="../images/icon-mission.png" alt="">
         <h1>Missão</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ipsam nam adipisci impedit ab recusandae ipsa soluta
-          fuga odio alias unde amet aut velit, numquam fugit ullam. Officia, impedit sunt?</p>
+        <p>A Vincool tem como missão desenvolver produtos e soluções tecnológicas que preservem ao máximo as características do vinho de seus 
+            clientes tendo o cuidado de trazer uma solução personalizada para cada tipo diferente dessa bebida para a melhor experiência do nosso
+            cliente com o seu vinho preferido.</p>
       </article>
       <article class="col-lg-4">
         <img src="../images/icon-vision.png" alt="">
         <h1>Visão</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ipsam nam adipisci impedit ab recusandae ipsa soluta
-          fuga odio alias unde amet aut velit, numquam fugit ullam. Officia, impedit sunt?</p>
+        <p>Oferecer soluções tecnológicas de maneira ágil e eficiente a fim de ser percebida como uma empresa premium e de alta performance.
+            Estar sempre apto a desenvolver um ambiente propício para desenvolvimento e aplicação de inovação, engajamento e respeito.</p>
       </article>
       <article class="col-lg-4">
         <img src="../images/icon-values.png" alt="">
         <h1>Valores</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ipsam nam adipisci impedit ab recusandae ipsa soluta
-          fuga odio alias unde amet aut velit, numquam fugit ullam. Officia, impedit sunt?</p>
+        <p>Foco no cliente. 
+            Qualidade diferenciada nos processos e produtos.
+            Responsabilidade social e compromisso com o meio ambiente.
+            Pessoas valorizadas e respeitadas. </p>
       </article>
     </div>
   </section>
+  <!-- FIM DA SECTION -->
+  <!-- ESTA DIV eu uso para criar um espaçamento entre o elemento de cima em relação ao de baixo -->
   <div class="space"></div>
+  <!-- FIM DA DIV de espaçamento -->
+  <!--
+    Este article é responsavel por conter uma imagem e ao seu lado um texto que explica sobre o nosso projeto.
+    O conceito deste Article é usado tambem no que esta abaixo. Mostrando um texto sobre a tecnologia aplicada e uma imagem ao lado do texto.
+  -->
   <article class="container-fluid" id="produto">
     <div class="row">
-      <div class="col-lg-6 background-projetc anime">
+      <div class="col-lg-6 background-projetc">
 
       </div>
       <div class="col-lg-6 explication-project">
         <h1>SmartWine</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dicta voluptas doloremque commodi nesciunt esse quo
-          delectus assumenda officiis corrupti rerum atque quibusdam, modi maiores, excepturi velit, placeat laboriosam ex?</p>
+        <p> É uma adega inteligente que monitora temperatura e umidade. Utiliza a tecnologia de três sensores em seu entorno,
+          uma placa arduino na parte traseira e um cooler responsável pelo resfriamento. </p>
         <center>
           <a href="#">Fale Conosco</a>
         </center>
@@ -131,48 +202,64 @@
     <div class="row">
       <div class="col-lg-6 explication-arduino">
         <h1>Tecnologia</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dicta voluptas doloremque commodi nesciunt esse quo
-          delectus assumenda officiis corrupti rerum atque quibusdam, modi maiores, excepturi velit, placeat laboriosam ex?</p>
+        <p> O IOT é uma tecnologia que permite a ligação de "coisas" com "coisas". A SmartWine proporciona para o seu cliente uma
+          experiência que é integrada a essa tecnologia. </p>
         <center>
           <a href="#" class="btn btn-yellow">Nossas Tecnologias</a>
         </center>
       </div>
-
-      <div class="col-lg-6 background-explication-tecnologhy anime">
+      <div class="col-lg-6 background-explication-tecnologhy ">
 
       </div>
     </div>
   </article>
+  <!-- FIM dos dois Article que contem imagem e textos -->
+
+  <!-- DIV QUE CRIA ESPAÇAMENTO ENTRE O ELEMENTO SUPERIOR E INFERIOR -->
   <div class="space"></div>
-  <!-- SGV DE IMGS, BOX DE TECNOLOGIAS USADAS -->
-  <section class="container anime">
+  <!-- FIM DA DIV DE ESPAÇAMENTO -->
+
+  <!-- 
+      Com esta Section esta sendo contida as duas box que explica sobre as tecnologias usadas
+      E a tecnologia Cloud que usamos em si e no que a cloud ajuda em nosso projeto
+   -->
+  <section class="container" id="tecnologia">
     <div class="row">
       <div class="col-lg-1"></div>
       <article class="col-lg-4 box-tecnologias">
         <div class="icons8-código-do-google"></div>
         <h1>Tecnologias Modernas</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repellat quibusdam eos omnis laborum pariatur
-          possimus architecto doloremque esse corrupti minus optio, odio rem cupiditate expedita nam nihil commodi ipsam?</p>
+        <p> Atualmente utilizamos as tecnologias Node.js (servidor) e as linguagens de programação (Javascript). </p>
       </article>
       <div class="col-lg-2"></div>
       <article class="col-lg-4 box-tecnologias bg-wine">
         <div class="icons8-onedrive"></div>
         <h1 style="color: #fff;">Tecnologia Cloud</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium repellat quibusdam eos omnis laborum pariatur
-          possimus architecto doloremque esse corrupti minus optio, odio rem cupiditate expedita nam nihil commodi ipsam?</p>
+        <p> Atualmente as tecnologias presentes no mercado são: AWS (Amazon), Google Cloud (Google) e o Azure (Microsoft) que é responsável
+          pelo banco de dados da SmartWine. </p>
       </article>
 
       <div class="col-lg-1"></div>
     </div>
   </section>
-
+  <!-- FIM DA SECTION -->
+  <!-- DIV DE ESPAÇAMENTO -->
   <div class="space"></div>
-  <div class="space container-fluid">
+  <!-- FIM DA DIV DE ESPAÇAMENTO -->
+  <!--     
+    NESTA DIV eu apenas estou criando o  titulo que ira conter EQUIPE ESCRITO e dando um espçamento entre o elemento superior e inferior 
+    e logo centralizando.  
+  -->
+  <div class="space container-fluid" id="equipe">
     <center>
       <h1 style="font-size: 5em;">Equipe</h1>
     </center>
   </div>
-
+  <!-- FIM DA DIV QUE CRIA O TITULO EQUIPE -->
+  <!--
+    NESTA DIV ABAIXO havera um section e dentro dela havera nossas fotos e nossos nomes e um link que pode redirecionar para nossas
+    redes sociais particulares.
+  -->
   <div class="container-fluid ">
     <section class="container">
       <div class="row">
@@ -208,13 +295,21 @@
       </div>
     </section>
   </div>
+  <!-- FIM DA DIV QUE CONTEM INFORMAÇÕES DA NOSSA EQUIPE -->
+  <!-- DIV DE ESPAÇAMENTO -->
   <div class="space"></div>
-  <article class="container-fluid">
+  <!-- FIM DA DIV DE ESPAÇAMENTO -->
+  <!--
+    Abaixo ira conter um Article que ira obter de um lado dele um texto que esta escrito fale conosco, e outras informações a mais, 
+    e logo depois uma outra div dentro deste mesmo Article que ira conter um formulario de preenchimento para entrar em contato com nossa equipe.
+  -->
+  <article class="container-fluid" id="faleconosco">
     <div class="row">
       <div class="col-lg-7 banner-faleconosco">
         <h1>Fale Conosco</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis incidunt culpa, blanditiis autem quibusdam velit
-          accusantium fuga est aliquid sed obcaecati accusamus deserunt officiis, id soluta harum quis eum cumque!</p>
+        <p>Entre em contato com a Vincool, e nossos especialistas forneceram o melhor da tecnologia de adegas ja oferecida 
+          no mercado. Fale conosco.
+        </p>
         <nav class="nav-socialmidia">
           <a href="">
             <div class="icons8-linkedin"></div>
@@ -232,7 +327,7 @@
         <input class="inputs" type="text" placeholder="Informe" />
         <label for="">Email</label>
         <input class="inputs" type="text" placeholder="Informe" />
-        <label for="">Responsavel</label>
+        <label for="">Responsável</label>
         <select class="inputs" name="" id="">
           <option value="">Selecione</option>
           <option value="">Selecione</option>
@@ -246,9 +341,66 @@
       </div>
     </div>
   </article>
-
-  <script src="/js/jquery.js"></script>
-
+  <!-- FIM DO ARTICLE QUE DE FALE CONOSCO -->
+  <script src="/js/scripts.js"></script>
 </body>
+<!-- FIM DO BODY -->
 
 </html>
+<script>
+  // Debounce do Lodash
+debounce = function(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+//animando topo com scroll
+$(function() {
+	$('.navegation a').click(function(e){
+		e.preventDefault();
+
+		var id = $(this).attr('href');
+		var targetOffset = $(id).offset().top;
+
+
+	$('html, body').animate({
+		scrollTop: targetOffset - 70
+	},1000);
+		console.log(targetOffset);
+	});
+});
+
+$(function(){
+	var $target = $('.anime'),
+			animationClass = 'anime-start',
+			offset = $(window).height() * 3/4;
+
+	function animeScroll() {
+		var documentTop = $(document).scrollTop();
+
+		$target.each(function(){
+			var itemTop = $(this).offset().top;
+			if (documentTop > itemTop - offset) {
+				$(this).addClass(animationClass);
+			} else {
+				$(this).removeClass(animationClass);
+			}
+		});
+	}
+
+	animeScroll();
+
+	$(document).scroll(debounce(function(){
+		animeScroll();
+	}, 100));
+});
+</script>

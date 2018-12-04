@@ -29,7 +29,6 @@ $(function() {
 	});
 });
 
-
 $(function(){
 	var $target = $('.anime'),
 			animationClass = 'anime-start',

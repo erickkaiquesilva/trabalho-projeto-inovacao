@@ -18,11 +18,13 @@
     --white: #FFFFFF;
     --black: #202020;
     --green: #1df098;
-    --gray: #808080;
+    --gray: #ecebeb;
     --blue: #1d7ff0;
+    --red: #db4d43;
     /* CORES DE EFEITO */
     --wine_h: #2b0524;
     --yellow_h: #dfd227;
+    --green_h: #20cf86;
     /* CORES COM EFEITO */
     --wine_opacity: rgb(59,6,50, 0.5);
 }
@@ -30,13 +32,22 @@
 .inputs{width: 100%; height: 45px; margin: 15px 0px; padding: 7px; font-size: 1.2em; color: var(--wine); font-weight: normal;}
 .space{padding-bottom: 45px;}
 .bg-wine{background: var(--wine); color: var(--white);}
-.fl_left{float: left;}
-.fl_right{float: right;}
 .txt_right{text-align: right;}
 .anime{opacity: 0; transform: translate3d(-100px, 0, 0); transition: .3s;}
 .anime-start{opacity: 1; transform: translate3d(0, 0, 0);}
 .fontzero{font-size: 0em;}
-.left{float: left;}
+.left{float: left !important;}
+.right{float: right;}
+.fundoWine{background: var(--wine); color: var(--white);}
+.fundoGray{background: var(--gray); color: var(--black);}
+.fundoGreen{background: var(--green); color: var(--black);}
+/* ALERTS */
+.warning{background: var(--red); color: var(--white) !important; border-color: var(--red) !important;}
+.alert{margin: 10px 0px;}
+.alert li{display: inline-block; margin: 0px 25px;}
+.alert h3{font-size: 2em;}
+.alert p{font-size: 1.7em; text-decoration: underline;}
+.alert a{font-size: 1.5em; margin: 10px 0px; background: var(--gray); color: var(--white); padding: 5px; border-radius: 7px;}
 /* ACKGROUND SECUNDARIO */
 .background-primary{background-color: var(--wine);}
 .background-equip{background-image: url("../images/equip.jpg"); background-repeat: no-repeat; background-attachment: fixed; background-position: top;}
@@ -46,7 +57,12 @@
 .navegation li{display: inline; margin: 0px 10px;}
 .navegation a{text-transform: uppercase; font-size: 1.5em; color: var(--white); padding: 7px 15px; text-decoration: none; transition: all ease 0.7s;}
 .navegation a:hover{background: var(--green); color: #444; font-weight: bold; padding: 20px 15px;}
-.main-log a{margin-left: 10px; font-size: 1.7em; margin-top: 25px; padding: 7px 15px; text-transform: uppercase; font-weight: bold; }
+.main-log{float: right;}
+.main-log li{display: inline-block;}
+.main-log a{margin-top: 15px;}
+.sub-menu{display: none; background: #FFF; width: 120px; position: absolute; z-index: 900; margin-left: 70px; margin-top: -10px; border-radius: 5px;  border: 1px solid #DDD;}
+.sub-menu li{display: block; border-bottom: 1px solid #DDD; bottom: 0px;}
+.sub-menu a{font-size: 1.2em; font-weight: bold; color: var(--wine); display: block; margin-top: 0px; text-decoration: none; padding: 4px;}
 .slide-show img{width: 100%;}
 /* SECTION QUEM SOMOS */
 .header-quemsomos h1{font-size: 5em; font-weight: bold; text-transform: uppercase;}
@@ -89,6 +105,35 @@
 .form-cadastro .inputs:focus{border-color: var(--wine); border-radius: 0px; font-weight: bold; }
 .banner-cadastro img{width: 100%; max-width: 400px; margin-top: 50px; position: fixed;}
 /* AND CADASTRO */
+/* PAGE CADASTRO ADEGA */
+.infoCadAdega{width: 80%; padding: 13px; margin: 10px 0px; border-radius: 7px;}
+.infoCadAdega ul{margin-left:20px }
+.infoCadAdega li{font-size: 1.2em;}
+.infoCadAdega p{font-size: 1.4em; line-height: 175%;}
+.boxFormAdega{background: var(--white);}
+.boxFormAdega h1{line-height: 175%; text-transform: uppercase;}
+.formAdega label{font-size: 1.5em; font-weight: bold; color: var(--wine); display: block; margin: 10px 0px;}
+.formAdega input{width: 85%; height: 45px; margin-bottom: 10px; padding: 4px; font-size: 1em;}
+.formAdega input:focus{border-color: var(--wine); font-weight: bold;}
+.formAdega button{widows: 100%; height: 45px; margin-top: 40px; font-size: 1.5em; font-weight: bold; padding: 4px; border: 1px solid;}
+/* AND CADASTRO ADEGA */
+.header-faq h1{
+  color: var(--white);
+  text-align: center; 
+}
+.header-faq p{
+  color: var(--white);
+  text-align: center; 
+}
+.box-help h1 {
+  color: var(--black);
+  text-align: center; 
+}
+.box-help p {
+  color: var(--black);
+  text-align: center; 
+}
+
 /*  PAGE DASHBOARD */
 .menu-nav nav{position: fixed; width: 225px;	height: 100%;	background-color: #1f1f1f; left: 0;}
 .menu-nav ul{margin-top:150px;	list-style: none;	display: block; margin-left: -40px;}
@@ -98,21 +143,41 @@
 .menu-nav li:hover div.barra{width:100%;}
 .menu-nav li:hover p.menu{opacity: 1;}
 .box-info{float: left; margin-top: 10px; width: 100%;}
-.box-info li{display: inline-block; margin: 0px 7px; color: #1f1f1f; width: 30%; padding: 30px; text-align: center; border-radius: 7px; border: 3px solid;;} 
+.box-info li{display: inline-block; margin: 0px 7px; color: #1f1f1f; width: 23%; padding: 30px; text-align: center; border-radius: 7px; border: 3px solid;} 
 .text-info{display: inline-block; cursor: default;}
 .text-info h1{font-size: 4em;}
 .text-info p{font-size: 1.5em; text-transform: uppercase;}
-.name-user{font-size: 1.5em; color: var(--white); padding-top: 15px;}
+.name-user{font-size: 1.5em; color: var(--white); padding-top: 15px;} 
 .name-user span{font-weight: bold; text-decoration: underline;}
-.box-sensor{background-color: var(--wine_opacity); height: 120px; border: 1px solid var(--wine); color: #FFF; padding: 20px; border-radius: 7px;}
-.box-sensor ul{list-style: none;}
-.box-sensor li{display: inline-block;}
+.line-info-tempUmi span{font-weight: bold;}
+.line-info-tempUmi h2{font-weight: bold; border-bottom: 3px solid var(--black);}
+.line-info-tempUmi p{font-size: 1.3em; line-height: 175%; padding: 7px; background: var(--wine); color: var(--white); font-weight: bold;}
+.box-medias{background-color: var(--white); width: 100%; margin: 2px 2px; padding: 20px; border-radius: 7px;}
+.box-medias ul{list-style: none;}
+.box-medias li{display: inline-block;}
 .box-text-graphic h1{text-transform: uppercase; border-bottom: 1px solid #DDD;}
 .box-text-graphic p{font-size: 1.4em; line-height: 200%;}
+.exibe-max-min{background: var(--white); width: 50%; text-align: center; padding: 15px; border-radius: 7px;}
+.exibe-max-min h1{font-size: 2.5em; font-weight: lighter; text-align: center;}
+.exibe-max-min span{font-size: 3em; font-weight: bold;}
+/* AND DASHBOARD */
+/* ADM LOGIN */
+.login-adm{background: #FFF; padding: 10px; margin: 70px 0px;}
+.login-adm button{width: 50%; height: 40px; font-size: 1.4em; font-weight: bold; border: 1px solid;}
+.login-adm .inputs{margin: 25px 0px; border: 1px solid #DDD; font-weight: bold;}
+/* AND ADM LOGIN */
+/* INDEX ADM SISTEMA */
+.boxAdmDados{background: #CCC; width: 32%; margin: 10px 2px; border-radius: 7px;}
+.boxAdmDados p{font-size: 2em; text-transform: uppercase;}
+.boxAdmDados span{font-size: 1.7em;}
+.boxDadosBanco{padding: 15px; color: var(--wine); background: #FFF; width: 50%; margin-bottom: 10px;}
+/* AND INDEX ADM SISTEMA */
 /* BUTONS, FUNDOS DEFINIDOS */
 .btn-out-green{background: transparent; color: var(--green); border-color: var(--green); transition: all ease-out 1s;}
 .btn-out-green:hover{background: var(--green); color: var(--white);}
 .btn-out-green:focus{background: var(--green); color: var(--white);}
+.btn-green{background: var(--green); color: var(--white); border-color: var(--green_h); transition: all ease-out 1s;}
+.btn-green:hover{background: var(--green_h);}
 .btn-yellow{background: var(--yellow); color: var(--white);}
 .btn-yellow:hover{background: var(--yellow_h); color: var(--white);}
 
@@ -125,3 +190,5 @@
 
 /* TEXT STYLE */
 .title-big{font-size: 7em; font-weight: bold;}
+
+/* CLASS USADAS SOMENTE NO RESPONSIVE E OCULTADA PARA O DESKTOP */

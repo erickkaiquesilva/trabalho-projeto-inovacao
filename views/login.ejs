@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Login</title>
-
+  <!-- 
+        Abaixo é chamado os arquivos externos que são para uso da aplicação.
+        Como o CSS que estiliza a página e o JAVASCRIPT que mostra os gráficos.
+    -->
   <link  rel="stylesheet" href='../stylesheets/estiloLogCad.css'>
   <link  rel="stylesheet" href='../stylesheets/style.css'>
   <script src="../public/js/blabla.js"></script>
@@ -14,12 +17,12 @@
 </head>
 
 <body>
-  <div class="login-page">
+  <div class="login-page"> 
     <div class="form">
       <center><img style="width: 75%; max-width: 80px; margin-bottom: 30px;" src="../images/user.png" alt=""></center>
       <form class="login-form" action="/login" method="POST">
-        <input type="text" placeholder="Email" name="email" />
-        <input type="password" placeholder="Senha" name="senha" />
+        <input type="text" placeholder="Email" name="username" />
+        <input type="password" placeholder="Senha" name="password" />
         <button class="btn-out-green">login</button>
         <p class="message">Não registrado?
           <a href="/singin">Criar conta</a>

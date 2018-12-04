@@ -1,69 +1,45 @@
-var express = require('express');
-var router = express.Router();
-let db = require("../database/data").Arduino;
+// As constantes express, router são bibliotecas do node
+const express = require('express');
+const router = express.Router();
+// A constante auth é uma biblioteca node que faz controle de seção
+const auth = require('connect-ensure-login');
+const db = require('../database/data').Users;
 
+// Na get /dashboard o auth.ensureLoggedIn esta fazendo uma checagem se o usuário esta logado ou não. Caso esteja
+// acessa a dashboard, caso contrario vai direto para a página de login
+router.get("/", auth.ensureLoggedIn("/login"), (req, res, next) => {
+    let user = req.session.passport.user;
+    db.selectTemAdega(user.id)
+      .then(resultado => {
+        if(resultado.length != 0)
+        {
+          res.render("dashboard", {
+              teste: "oi",
+              user: {
+                name: user.nome,
+                url: "/users/" + user.id,
+                tempMin: resultado[0].TempMinima,
+                tempMax: resultado[0].TempMaxima,
+                UmiMin: resultado[0].UmidadeMin,
+                UmiMax: resultado[0].UmidadeMax
+              }
+            });
+        }
+        else
+        {
+          res.redirect('/singinAdega');
+        }
+      })
 
-router.get("/dashboard", (req,res) => {
-    if(req.session.user){
-      let usuario = req.session.user;
-
-      console.log(usuario);
-
-      
-    }
-});
-
-
- 
-router.get('/', function(req, res, next) {
-  res.render('dashboard', { title: 'Bem vindo - Erick Silva' });
-});
-
-router.get('/ultimas', function(req, res, next){
-    
-});
-
-
-router.get('/leituras', function (req, res, next) {
-
-  db.selectArduino().then((resultados) => {
-
-    var temp = [];
-    var umi = [];
-    var date = [];
-    
-    let somaTemp = 0;
-    let somaUmi = 0;
-    let mediaTemp = 0;
-
-    for (var i = 0; i < resultados.length; i++) {
-      temp.push(resultados[i].temperatura);
-      umi.push(resultados[i].umidade);
-      date.push(resultados[i].momento);
-    }
-
-    for(var i = 0; i < temp.length; i ++){
-        somaTemp+= Number(temp[i]);
-    }
-
-    for(var u = 0; u < umi.length; u ++){
-      somaUmi = Number(umi[u]);
-    }
-    
-    mediaTemp = somaTemp / temp.length;
-    mediaUmi = somaUmi / umi.length;
-
-
-    res.json({
-      temp: temp,
-      umi: umi,
-      mediaTemp: mediaTemp,
-      mediaUmi: mediaUmi
-    });
-
-
-  }).catch(err => console.log(err));
-
-});
+    // console.log('Seja Bem Vindo', user);
+    // res.render("dashboard", {
+    //   teste: "oi",
+    //   user: {
+    //     name: user.nome,
+    //     url: "/users/" + user.id
+    //   }
+    // });
+    //res.render("dashboard", { title: 'teste' });
+  });
 
 module.exports = router;

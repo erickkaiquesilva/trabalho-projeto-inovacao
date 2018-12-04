@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Cadastre-se</title>
+  <!-- 
+        Abaixo é chamado os arquivos externos que são para uso da aplicação.
+        Como o CSS que estiliza a página e o JAVASCRIPT que mostra os gráficos.
 
-  <link  rel="stylesheet" href='../stylesheets/estiloLogCad.css'>
-  <link  rel="stylesheet" href='../stylesheets/style.css'>
+        Também links externos que são API'S como BootStrap e o JQuery
+    -->
+  <link rel="stylesheet" href='../stylesheets/estiloLogCad.css'>
+  <link rel="stylesheet" href='../stylesheets/style.css'>
   <script src="../public/js/blabla.js"></script>
-
-
 </head>
+
 <body>
   <div class="login-page">
-  <div class="form">
-      <center><img style="width: 75%; max-width: 80px; margin-bottom: 30px;" src="../images/user.png" alt=""></center>
-    <form class="login-form" action="/singin" method="POST">
-      <input type="text" placeholder="Nome Completo" name="nome" required/>
-      <input type="password" placeholder="Senha" name="senha"  required minlength="6" maxlength="12">
-      <input type="text" placeholder="Seu Email" name="email" required/>
-      <button class="btn-out-green">Cadastrar-se</button>
-      <p class="message">Já registrado? <a href="/login">Logar</a></p>
-    </form>
+    <div class="form">
+      <center>
+        <img style="width: 75%; max-width: 80px; margin-bottom: 30px;" src="../images/user.png" alt="">
+      </center>
+      <form class="login-form" action="/singin" method="post">
+        <input type="text" placeholder="Nome Completo" name="nome" required/>
+        <input type="password" placeholder="Senha" name="senha" required minlength="6" maxlength="12">
+        <input type="text" placeholder="Seu Email" name="usuario" required/>
+        <button class="btn-out-green">Cadastrar-se</button>
+        <p class="message">Já registrado?
+          <a href="/login">Logar</a>
+        </p>
+      </form>
+    </div>
   </div>
-</div>
 </body>
+
 </html>

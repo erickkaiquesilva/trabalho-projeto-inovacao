@@ -1,9 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+
+const auth = require('connect-ensure-login');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Vinecool' });
+router.get('/', auth.ensureLoggedOut('/login'), function(req, res, next) {
+  res.render('index',{title:'teste'});
 });
 
 module.exports = router;

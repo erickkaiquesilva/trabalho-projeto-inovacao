@@ -1,14 +1,32 @@
+<!--
+    Este view é responsavel pela exibição da DASHBOARD, dentro desta view ira ser exibido
+    os gráficos que são utilizados no projeto, ira ser contido os marcadores do projeto, como por exemplo
+    primeiro quartil, máxima, minima entre outros marcadores. Nesta página o usuário do sistema
+    ira poder ver todas as informações de sua adega.
+
+    Nesta página usamos HTML5, CSS e JavaScript para estilizala. Abaixo sera explicado aonde se abre
+    cada tag e se fecha, e oque cada uma representa.
+-->
 <!DOCTYPE html>
 <html>
 
 <head>
+    <!-- 
+        Chamada das meta tags
+        Explicação do conceito delas esta no arquivo da index.ejs
+    -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>
-
+        Bem Vindo -
+        <%= user.name %>
     </title>
+    <!-- 
+        Chamada dos arquivos externos para o arquivo HTML
 
+        Explicação do conceito é apresentado na index.ejs
+    -->
     <link href="https://fonts.googleapis.com/css?family=Krub:300,400,600,700" rel="stylesheet">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
@@ -18,162 +36,281 @@
         crossorigin="anonymous">
     <link rel='stylesheet' href='../stylesheets/style.css' />
 
+    <link rel='stylesheet' href='../stylesheets/responsive.css' />
+
     <link rel='stylesheet' href='../stylesheets/icons.css' />
+
 </head>
 
 <body>
+    <div class="container-fluid menu-responsive box-none-full">
+        <h3>Olá
+            <span>
+                <%= user.name %>
+            </span>
+        </h3>
+        <ul class="nav-responsive">
+            <li>
+                <a href="">Editar Senha</a>
+                <a href="/faq">Faq</a>
+                <a href="/loggof/log">Sair</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--
+       A Tag Header é usada para os mesmos fins que foi utilizada na index.ejs .
+    -->
     <header class="container-fluid background-primary ">
         <div class="row">
-            <div class="col-lg-2 logo">
+            <div class="col-lg-2 col-md-2 col-sm-6 logo">
+
                 <h1 class="fontzero">
-                    <%= title %>
+                    <a href="/">
                         <img src="../images/logo.png" alt="[vincoll]" title="Vincool">
+                    </a>
                 </h1>
             </div>
-
-            <div class="col-lg-8">
-                <ul class="navegation">
+            <div class="col-lg-2 col-md-5 col-sm-6 main-log">
+                <ul>
                     <li>
-                        <a href="/">Home</a>
+                        <h1 class="name-user">Olá
+                            <span>
+                                <%= user.name %>
+                            </span>
+                        </h1>
                     </li>
                     <li>
-                        <a href="">Quem Somos</a>
-                    </li>
-                    <li>
-                        <a href="">Produto</a>
-                    </li>
-                    <li>
-                        <a href="">Tecnologias</a>
-                    </li>
-                    <li>
-                        <a href="">Equipe</a>
-                    </li>
-                    <li>
-                        <a href="">Fale Conosco</a>
+                        <a id="main-top" href="#" class="icons9-arrow-down"></a>
+                        <button class="btn-responsive box-none-full">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
                     </li>
                 </ul>
-            </div>
-            <div class="col-lg-2 main-log">
-                <h1 class="name-user">Olá
-                    <span>Usuário</span>
-                </h1>
+                <nav>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="#">Editar Senha</a>
+                        </li>
+                        <li>
+                            <a href="/faq">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="/loggof/log">Sair</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
-
-
+    <!-- FIM DO HEADER -->
+    <!--
+        Esta div ela é responsavel por conter as informações geral da dashboard, dentro dela eu armazenei 
+        as informações de temperatura coletadas em tempo real, os gráficos e os marcadores.
+    -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-2">
-                <div class="menu-nav">
-                    <nav>
-                        <ul>
-                            <a href="/dashboard">
-                                <li>
-                                    <div class="barra"></div>
-                                    <p class="menu">Dashboard</p>
-                                </li>
-                            </a>
-
-                            <a href="">
-                                <li>
-                                    <div class="barra"></div>
-                                    <p class="menu">Meu Perfil</p>
-                                </li>
-                            </a>
-
-                            <a href="">
-                                <li>
-                                    <div class="barra"></div>
-                                    <p class="menu">FAQ</p>
-                                </li>
-                            </a>
-                            <a href="">
-                                <li>
-                                    <div class="barra"></div>
-                                    <p class="menu">Fale com Equipe</p>
-                                </li>
-                            </a>
-                            <a href="/loggof/log">
-                                <li>
-                                    <div class="barra"></div>
-                                    <p class="menu">Sair</p>
-                                </li>
-                            </a>
-                        </ul>
-                    </nav>
-                </div>
+            <div class="col-lg-1 col-md-1">
             </div>
-            <div class="col-lg-10">
+            <div class="col-lg-10 col-md-10">
+                <div style="display: none;" id="alert-line" class=" alert alert-danger" role="alert">
+                    <ul>
+                        <li>
+                            <h3>Teste de Alert</h3>
+                        </li>
+                        <li>
+                            <p>A temperatura da sua Adega esta fora da minima permitida, por favor verifique...</p>
+                        </li>
+                        <li>
+                            <a href="#" onclick="fecha();">X</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 
+                    Abaixo estou criando uma div que ira conter as tres informções que aparece no topo da 
+                    dashboard, que seria 4 caixas que exibe os dados de temperatura dos tres sensores e o 
+                    que exibe o de umidade.
+                -->
                 <div class="box-info">
                     <ul>
-                        <li class="fn-out-line-green text-info">
-                            <h1>17°C</h1>
+                        <li id="sensor1" class="text-info" title="Sensor 1">
+                            <h1 id="temp1"></h1>
                             <p>temp</p>
                         </li>
-                        <li class="fn-out-line-blue text-info">
-                            <h1>50%</h1>
-                            <p>umi</p>
+                        <li id="sensor2" class="text-info" title="Sensor 2">
+                            <h1 id="temp2"></h1>
+                            <p>temp</p>
                         </li>
-                        <li class="fn-out-line-gray text-info">
-                            <h1>15°</h1>
-                            <p>méd</p>
+                        <li id="sensor3" class="text-info" title="Sensor 3">
+                            <h1 id="temp3"></h1>
+                            <p>temp</p>
+                        </li>
+                        <li id="sensorUmi" class="text-info" title="Sensor 1">
+                            <h1 id="umi1"></h1>
+                            <p>umi</p>
                         </li>
                     </ul>
                 </div>
 
-                <div style="margin-bottom: 50px !important;"></div>
+                <!--FIM DA DIV QUE EXIBE OS DADOS DE TEMP E UMI DOS TRES SENSORES -->
 
-                <div class="row">
-                    <div class="col-lg-7 chart-container" style="position: relative; height:60vh; width:50vw">
+                <!-- Esta div tem um style que cria um espaçamento entre o elemento de cima e o de baixo -->
+                <div style="margin-bottom: 50px !important;"></div>
+                <!-- FIM do espaçamento -->
+
+                <!--
+                    Dentro desta div eu estou criando um gráfico que é responsavel de mostrar as informações
+                    em tempo real de coleta de dados, este gráfico esta sendo exibido dentro de um canvas.
+                -->
+                <div class="row box-none">
+                    <div class="col-lg-2 col-md-1"></div>
+                    <div class="col-lg-8 col-md-10">
+                        <canvas class="line-time"></canvas>
+                    </div>
+                    <div class="col-lg-2 col-md-1"></div>
+                </div>
+
+                <center>
+                    <a class="btn-tempsumis">Veja as Temperaturas e Umidades Permitidas</a>
+                </center>
+
+                <div class="row mobile-exibe-temps-umis-permitidas">
+
+                    <div class="col-lg-3 col-sm-3 exibe-max-min" title="Temperatura Mínima Permitida">
+                        <h1>Temperatura Mínima</h1>
+                        <span>
+                            <%= user.tempMin %>°
+                        </span>
+                    </div>
+                    <div class="col-lg-3 col-sm-3 exibe-max-min" title="Umidade Mínima Permitida">
+                        <h1>Umidade Mínima</h1>
+                        <span>
+                            <%= user.UmiMin %>%</span>
+                    </div>
+                    <div class="col-lg-3 col-sm-3 exibe-max-min" title="Temperatura Máxima Permetida">
+                        <h1>Temperatura Máxima</h1>
+                        <span>
+                            <%= user.tempMax %>°
+                        </span>
+
+                    </div>
+                    <div class="col-lg-3 col-sm-3 exibe-max-min" title="Umidade Máxima Permitida">
+                        <h1>Umidade Máxima</h1>
+                        <span>
+                            <%= user.UmiMax %>%
+                        </span>
+                    </div>
+                </div>
+                <!-- FIM da div do gráfico em tempo real -->
+                <!-- Esta div tem um style que cria um espaçamento entre o elemento de cima e o de baixo -->
+                <div style="margin-bottom: 50px !important;"></div>
+                <!-- FIM do espaçamento -->
+
+                <!--
+                    Dentro desta div esta sendo contido um gráfico exibido em linha, que contem dados de uma semana
+                    e ao lado, este gráfico esta exibindo a , média desta semana ao usuário.
+                -->
+                <div class="row box-none">
+                    <div class="col-lg-7 col-md-8 box-none" style="position: relative; height:60vh; width:50vw">
                         <canvas class="line-chart"></canvas>
                     </div>
-                    <div class="col-lg-4 box-text-graphic">
+                    <div class="col-lg-4 col-md-4 col-sm-6 box-text-graphic box-none">
                         <h1>Gráfico Semanal</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas mollitia magnam magni eveniet quas
-                            aperiam eaque atque quae ex! Quibusdam aut, iusto perspiciatis deleniti et aspernatur distinctio
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas mollitia magnam magni
+                            eveniet quas
+                            aperiam eaque atque quae ex! Quibusdam aut, iusto perspiciatis deleniti et aspernatur
+                            distinctio
                             alias magnam voluptates?</p>
                     </div>
                 </div>
-                <div class="row">
+                <!-- FIM DA DIV que contem o gráfico da semana -->
+
+                <!--
+                    Nesta Div esta sendo contido as informações que da marcações para nós, como por exemplo
+                    o primeiro quartil e o terceiro quartil, a média geral de todos os sensores até o momento.
+                -->
+                <div class="row line-info-tempUmi">
+                    <h1>Apontadores</h1>
                     <div class="col-lg-3">
-                        <h1>Sensor 1</h1>
-                        <div class="box-sensor">
-                            <h2>12°</h2>
-                            <p>TEMPERATURA</p>
+                        <div class="col-lg-12 col-md-3 col-sm-3 box-medias">
+                            <h2><span id="mediaTemp"></span>°</h2>
+                            <p>Média de Temperatura</p>
                         </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <h1>Sensor 2</h1>
-                        <div class="box-sensor">
+                        <div class="col-lg-12 col-md-3 col-sm-3 box-medias">
                             <ul>
                                 <li>
-                                    <h2 id="temp-real"></h2>
-                                    <p>TEMPERATURA</p>
-                                </li>
-                                <li style="margin-left:60px;">
-                                    <h2 id="umi-real"></h2>
-                                    <p>UMIDADE</p>
+                                    <h2><span id="pquartilTemp"></span>°</h2>
+                                    <p>Primeiro Quartil da Temperatura</p>
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <h1>Sensor 3</h1>
-                        <div class="box-sensor">
+                        <div class="col-lg-12 col-md-3 col-sm-3 box-medias">
+                            <h2><span id="tquartilTemp"></span>°</h2>
+                            <p>Terceiro Quartil da Temperatura</p>
+                        </div>
+                        <div class="col-lg-12 col-md-3 col-sm-3 box-medias">
                             <h2>12°</h2>
-                            <p>TEMPERATURA</p>
+                            <p>Desvio Padrão</p>
                         </div>
                     </div>
+                    <div class="col-lg-6">
+                        <div>
+                            <canvas class="chart-pizza" style="display: block; width: 864px; height: 832px; margin-right: 50px;"></canva>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="col-lg-12 col-md-3 col-sm-3 box-medias">
+                            <h2><span id="mediaUmi"></span>°</h2>
+                            <p>Média de Umidade</p>
+                        </div>
+                        <div class="col-lg-12 col-md-3 col-sm-3 box-medias">
+                            <ul>
+                                <li>
+                                    <h2><span id="pquartilUmi"></span>°</h2>
+                                    <p>Primeiro Quartil da Umidade</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-12 col-md-3 col-sm-3 box-medias">
+                            <h2><span id="tquartilUmi"></span>°</h2>
+                            <p>Terceiro Quartil da Umidade</p>
+                        </div>
+                        <div class="col-lg-12 col-md-3 col-sm-3 box-medias">
+                            <h2>12°</h2>
+                            <p>Mediana</p>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="space"></div>
-                <div class="space"></div>
 
-                <div class="row">
-                    <div class="col-lg-4 box-text-graphic">
+                <div class="row line-info-tempUmi">
+
+                </div>
+                <!-- FIM DAS DIVS que contem os indicadores -->
+
+                <!-- Esta div tem um style que cria um espaçamento entre o elemento de cima e o de baixo -->
+                <div class="space"></div>
+                <div class="space"></div>
+                <!-- FIM DAS DIV's de espaçamento -->
+
+                <!--
+                    Abaixo a div esta contendo o gráfico de barra, este ira conter informações geral de cada semana,
+                    e ira mostrar em barra ao usuário. Ao lado um texto breve e explicativo sobre o gráfico.
+                -->
+                <div class="row box-none" style="display:none">
+                    <div class="col-lg-4 box-text-graphic" >
                         <h1>Grafico Mensal</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique cum dicta labore voluptas molestias! Adipisci cupiditate hic rerum itaque fugit maiores debitis! Animi atque accusantium, placeat unde non odio quo.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique cum dicta labore
+                            voluptas molestias!
+                            Adipisci cupiditate hic rerum itaque fugit maiores debitis! Animi atque accusantium,
+                            placeat
+                            unde non odio quo.</p>
                     </div>
                     <div class="col-lg-8">
                         <div class=" chart-container" style="position: relative; height:60vh; width:50vw">
@@ -181,15 +318,38 @@
                         </div>
                     </div>
                 </div>
+                <!-- FIM DA DIV que contem o gráfico de barras -->
+            </div>
+            <div class="col-lg-1 col-md-1">
             </div>
         </div>
     </div>
-
+    <!-- FIM DA DIV QUE ARMAZENA TODOS OS CONTEUDOS DA DASHBOARD -->
     <script src="/js/jquery.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
-    <script src="../js/graphi.js"></script>
-    
+    <script src="../js/charts.js"></script>
+    <script src="../js/apontadores.js"></script>
+    <script src="../js/script.js"></script>
+
+    <script>
+        $(function () {
+            $('#main-top').click(function () {
+                //alert("TA PEGANDO");
+                $(".sub-menu").fadeToggle(50);
+            });
+
+            $('.btn-responsive').click(function () {
+                $('.menu-responsive').slideToggle(2000);
+            });
+
+            $('.btn-tempsumis').click(function () {
+                $('.mobile-exibe-temps-umis-permitidas').slideToggle(1000);
+            })
+        });
+
+    </script>
+
 </body>
 
 </html>

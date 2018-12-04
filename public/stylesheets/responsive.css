@@ -1,0 +1,76 @@
+/*
+Este Arquivo é responsavel por controlar as midias Queries do Site
+*/
+@media screen and (min-width: 1024px){
+  .box-none-full{
+    display: none;
+  }
+
+  .mobile-exibe-temps-umis-permitidas{display: none; margin: 15px 0px;}
+  .btn-tempsumis{font-size: 1.2em; font-weight: bold; text-transform: uppercase; color: var(--wine); border: 1px solid var(--wine_opacity); padding: 7px; cursor: pointer;}
+  .btn-tempsumis:hover{background: var(--wine); color: var(--white); text-decoration: none;}
+}
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .logo{width: 50%; float: left;}
+  .logo img{width: 100%; width: 120px;}
+  .main-log h1{display: none;}
+  .main-log a{float: right; display: none;}
+  .btn-responsive{margin-top: 25px; margin-left: 120px; padding: 4px; background:  var(--wine); border: 1px solid var(--white); border-radius: 5px;}
+  .btn-responsive span{display: block; background: var(--white); padding: 1px 15px; margin: 4px 0px;}
+  .menu-responsive{width: 100%; padding: 3px; background: #1f1f1f; display: none;}
+  .menu-responsive h3{text-align: center; font-size: 2.7em; color: #FFF;}
+  .menu-responsive span{font-weight: bold;}
+  .menu-responsive li{display: block;}
+  .menu-responsive a{display: block; font-size: 1.5em; text-transform: uppercase; padding: 15px 0px; border-bottom: 2px solid var(--white); text-decoration: none; color: var(--white);}
+
+  .box-info li{display: inline-block; margin: 0px 7px; color: #1f1f1f; width: 45%; padding: 30px; text-align: center; border-radius: 7px; border: 3px solid; margin-bottom: 10px;}
+  .mobile-exibe-temps-umis-permitidas{display: none;}
+  .exibe-max-min{width: 43%; display: inline-block; margin: 10px 7px;}
+  .line-info-tempUmi h1{font-size: 2em; padding: 3px;}
+  .line-info-tempUmi p{font-size: 1em; line-height: 175%; padding: 7px;}
+  .box-medias{background-color: var(--white); margin: 10px 4px; display: inline-block; width: 45%; border-radius: 7px;}
+  .box-medias ul{list-style: none;}
+  .box-medias li{display: inline;}
+}
+/* Esta midia esta sendo responsavel por Imprimir o estilo abaixo, só quando a o tamanho da janela for até 650px */
+@media screen and (max-width: 650px) 
+{ 
+  /* Box usada quando quero sumir com alguma div */
+  .box-none 
+   {
+    display: none;
+   }
+   /* ALERT DO SISTEMA EM RESPONSIVE */
+   .alert{margin: 10px 0px;}
+   .alert li{display: inline-block; margin: 0px 5px;}
+   .alert h3{font-size: 1.4em; text-align: center;}
+   .alert p{font-size: 1.7em; text-decoration: underline;}
+   .alert a{font-size: 1.5em; }
+   /* Abaixo o uso de estilo no TOPO */
+   .logo{width: 50%; float: left;}
+   .logo img{width: 100%; width: 120px;}
+   .main-log h1{display: none;}
+   .main-log a{float: right; display: none;}
+   .btn-responsive{margin-top: 25px; margin-left: 120px; padding: 4px; background:  var(--wine); border: 1px solid var(--white); border-radius: 5px;}
+   .btn-responsive span{display: block; background: var(--white); padding: 1px 15px; margin: 4px 0px;}
+   .menu-responsive{width: 100%; padding: 3px; background: #1f1f1f; display: none;}
+   .menu-responsive h3{text-align: center; font-size: 2.7em; color: #FFF;}
+   .menu-responsive span{font-weight: bold;}
+   .menu-responsive li{display: block;}
+   .menu-responsive a{display: block; font-size: 1.5em; text-transform: uppercase; padding: 15px 0px; border-bottom: 2px solid var(--white); text-decoration: none; color: var(--white);}
+   /* Abaixo o uso de estilo na DASHBOARD */
+   .box-info li{display: inline-block; margin: 0px 7px; color: #1f1f1f; width: 45%; padding: 30px; text-align: center; border-radius: 7px; border: 3px solid; margin-bottom: 10px;}
+   .mobile-exibe-temps-umis-permitidas{display: none;}
+   .exibe-max-min{width: 43%; display: inline-block; margin: 10px 7px;}
+   .line-info-tempUmi h1{font-size: 2em; padding: 3px;}
+   .line-info-tempUmi p{font-size: 1em; line-height: 175%; padding: 7px;}
+   .box-medias{background-color: var(--white); margin: 10px 4px; display: inline-block; width: 45%; border-radius: 7px;}
+   .box-medias ul{list-style: none;}
+   .box-medias li{display: inline;}
+   #alert-line h1{font-size: 1.5em;}
+   #alert-line p{font-size: 1.2em;}
+   .btn-tempsumis{font-size: 1.2em; font-weight: bold; text-transform: uppercase; color: var(--wine); border: 1px solid var(--wine_opacity); padding: 7px; cursor: pointer;}
+   .btn-tempsumis:hover{background: var(--wine); color: var(--white); text-decoration: none;}
+   .btn-tempsumis:focus-visible{background: var(--wine); color: var(--white);}
+
+}

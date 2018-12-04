@@ -1,5 +1,5 @@
 /*
-    Arquivo JS que simula um sensor ficticio para envio de informações ao banco de dados
+    Arquivo JS que faz a simulação do sensor 1 da aplicação
 */
 // Chamando o Arquivo data e exportando o modulos SQL do Arduino
 let db = require("./database/data").Arduino;
@@ -9,7 +9,7 @@ setInterval(() => {
 
     // Função responsavel por criar a temperatura ficticia
     function temp() {
-        return temperatura = 9 + Math.floor(Math.random() * 7);;
+        return temperatura = 5 + Math.floor(Math.random() * 7);
     }
     // Função responsavel por criar a umidade ficticia
     function umi() {
@@ -35,17 +35,17 @@ setInterval(() => {
     umidade = umi(umidade);
 
     // Objeto que armazena as informações e envia para o insert do arduino
-    var obj = {
+    var dados = {
         temp: temperatura,
         umi: umidade,
         data: date
     }
 
-    console.log(obj);
+    console.log(dados);
 
 
-    // Chamando do modulo Arduino o SQL Insert para inserir as informações no banco
-    //db.insertArduino(obj);
+    // Chamando insert para inserir no banco de dados do sensor 1
+    db.insertSensor1(dados);
 
 }, 1000);
 
